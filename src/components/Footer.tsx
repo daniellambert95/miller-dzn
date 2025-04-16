@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-400 mb-6">
-              Elevating brands through exceptional design for over 15 years. We collaborate with the industry's
+              Elevating brands through exceptional design for over 15 years. We collaborate with the industry&apos;s
               best to redefine creativity standards.
             </p>
             

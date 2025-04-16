@@ -18,7 +18,7 @@ const PricingSection = () => {
     {
       title: 'Revisions',
       value: 'Unlimited',
-      description: "We refine until you're completely satisfied with every design."
+      description: "We refine until you&apos;re completely satisfied with every design."
     },
     {
       title: 'Platforms',
@@ -77,7 +77,7 @@ const PricingSection = () => {
                   
                   <div className="space-y-6 mb-8">
                     <p className="text-lg">
-                      Everything you need to power your brand's visual identity with unlimited design requests
+                      Everything you need to power your brand&apos;s visual identity with unlimited design requests
                       and dedicated support.
                     </p>
                     
@@ -102,7 +102,7 @@ const PricingSection = () => {
             
             {/* Features - 3 Columns */}
             <div className="lg:col-span-3 bg-white p-8 md:p-12">
-              <h3 className="text-2xl font-bold mb-8">What's Included</h3>
+              <h3 className="text-2xl font-bold mb-8">What&apos;s Included</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Plan Features */}
@@ -140,8 +140,8 @@ const PricingSection = () => {
                   <div className="mt-10 p-6 bg-gray-50 rounded-lg">
                     <h4 className="text-lg font-bold mb-2">Satisfaction Guaranteed</h4>
                     <p className="text-gray-700">
-                      If you're not completely satisfied with our service within the first 14 days, 
-                      we'll refund your payment in full. No questions asked.
+                      If you&apos;re not completely satisfied with our service within the first 14 days, 
+                      we&apos;ll refund your payment in full. No questions asked.
                     </p>
                   </div>
                 </div>

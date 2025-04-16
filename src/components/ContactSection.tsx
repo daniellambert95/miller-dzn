@@ -12,7 +12,7 @@ const ContactSection = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold">
-            Let's <span className="text-primary" style={{ color: '#04b9d6' }}>Create</span> Together
+            Let&apos;s <span className="text-primary" style={{ color: '#04b9d6' }}>Create</span> Together
           </h2>
           
           <p className="text-gray-700">

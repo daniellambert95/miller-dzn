@@ -44,7 +44,7 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-gray-700 text-lg">
-              With over 15 years of industry experience, we've collaborated with major brands, 
+              With over 15 years of industry experience, we&apos;ve collaborated with major brands, 
               clubs, and DJs globally. Our passion for exceptional design drives us to constantly 
               push the boundaries of creativity.
             </p>

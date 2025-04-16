@@ -41,7 +41,7 @@ const HeroSection = () => {
             {/* Brief Description */}
             <p className="text-gray-700 max-w-md text-lg">
               Elevating brands through exceptional design for over 15 years. 
-              We collaborate with the industry's best to redefine creativity standards.
+              We collaborate with the industry&apos;s best to redefine creativity standards.
             </p>
             
             {/* Call to Action */}
