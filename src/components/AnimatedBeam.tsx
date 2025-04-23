@@ -31,7 +31,6 @@ export const AnimatedBeam = ({
 }: AnimatedBeamProps) => {
   const particleRef = useRef<HTMLDivElement>(null);
   const [path, setPath] = useState<string>("");
-  const [pathLength, setPathLength] = useState<number>(0);
   
   // Calculate the path between the two elements
   useEffect(() => {
@@ -66,11 +65,9 @@ export const AnimatedBeam = ({
       tempPath.setAttribute("d", svgPath);
       tempSvg.appendChild(tempPath);
       
-      const length = tempPath.getTotalLength();
       document.body.removeChild(tempSvg);
       
       setPath(svgPath);
-      setPathLength(length);
     };
 
     updatePath();
@@ -83,10 +80,12 @@ export const AnimatedBeam = ({
   // Animation effect
   useEffect(() => {
     if (!particleRef.current || !path) return;
+    
+    // Store ref in a variable for the cleanup function
+    const particle = particleRef.current;
 
     const animateParticle = () => {
-      if (!particleRef.current) return;
-      const particle = particleRef.current;
+      if (!particle) return;
 
       // Create animation that runs once
       const animation = particle.animate(
@@ -133,9 +132,9 @@ export const AnimatedBeam = ({
 
     // Cleanup animation when component unmounts
     return () => {
-      if (particleRef.current) {
-        const animations = particleRef.current.getAnimations();
-        animations.forEach(animation => animation.cancel());
+      if (particle) {
+        const animations = particle.getAnimations();
+        animations.forEach((animation: Animation) => animation.cancel());
       }
     };
   }, [path, reverse, animationDuration, beamOpacity]);
