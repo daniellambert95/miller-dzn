@@ -5,75 +5,55 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-20 bg-white">
-      {/* Abstract Background Pattern */}
-      <div className="absolute inset-0 z-0 opacity-10 bg-pattern"></div>
+    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-20" style={{ backgroundColor: '#04b9d6' }}>
+      {/* Wave Decoration Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <svg className="absolute -left-20 top-0 h-full w-40 text-white opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0,0 C40,50 40,50 0,100 L0,0 Z" fill="currentColor" />
+        </svg>
+        <svg className="absolute right-0 bottom-0 h-full w-40 text-white opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M100,0 C60,50 60,50 100,100 L100,0 Z" fill="currentColor" />
+        </svg>
+      </div>
       
-      <div className="container-custom z-10 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            {/* Logo Mark */}
-            <div className="w-20 h-20 relative">
-              <Image 
-                src="/miller_logos_icons/Miller_icon_transparent.png" 
-                alt="Miller Design Icon" 
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            
-            {/* Brand Name */}
-            <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2 color-primary-direct" style={{ color: '#04b9d6' }}>
-                MDZN
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-medium text-secondary">
-                Digital Display
-              </h2>
-            </div>
-            
-            {/* Tagline */}
-            <h3 className="text-xl md:text-2xl font-medium text-secondary">
-              Think it. <span className="font-bold color-primary-direct" style={{ color: '#04b9d6' }}>Create it.</span>
-            </h3>
-            
-            {/* Brief Description */}
-            <p className="text-gray-700 max-w-md text-lg">
-              Elevating brands through exceptional design for over 15 years. 
-              We collaborate with the industry&apos;s best to redefine creativity standards.
-            </p>
-            
-            {/* Call to Action */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#contact" className="bg-primary-direct text-black hover:bg-opacity-90 transition-colors px-8 py-3 font-medium rounded-md text-center">
-                Start Creating
-              </a>
-              <a href="#services" className="border border-primary text-primary hover:bg-primary/10 transition-colors px-8 py-3 font-medium rounded-md text-center color-primary-direct">
-                Our Services
-              </a>
-            </div>
+      <div className="container-custom z-10 py-16 md:py-24 text-white">
+        <div className="flex flex-col items-center justify-center text-center space-y-12">
+          {/* Logo Mark - Centered */}
+          <div className="w-24 h-24 md:w-32 md:h-32 relative mb-4">
+            <Image 
+              src="/miller_logos_icons/miller white.png" 
+              alt="Miller Design Icon" 
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
           
-          <div className="hidden md:block relative">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500">
-              {/* Featured project image */}
-              <Image 
-                src="/miller_design_work/DJ Tennis.png" 
-                alt="Featured Design Work" 
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-sm font-medium opacity-80">Featured Project</p>
-                <p className="text-xl font-bold">DJ Tennis</p>
-              </div>
-            </div>
+          {/* Brand Name - Centered */}
+          <div className="text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide">
+              MDZN
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-medium text-white uppercase tracking-widest mt-2">
+              DIGITAL DISPLAY
+            </h2>
           </div>
+          
+          {/* Tagline */}
+          <h3 className="text-xl md:text-2xl font-medium text-white mt-4">
+            Think it. <span className="font-bold">Create it.</span>
+          </h3>
+          
+          {/* CTA Button */}
+          <a href="#contact" className="mt-8 bg-white text-primary-direct hover:bg-opacity-90 transition-colors px-10 py-3 font-medium rounded-full text-center inline-block" style={{ backgroundColor: '#ff4655', color: 'white' }}>
+            Free Quote!
+          </a>
         </div>
       </div>
+      
+      {/* Optional: Animated glowing line effect */}
+      <div className="absolute top-1/3 right-1/4 w-1/2 h-1 bg-white opacity-30 rounded-full"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-1/2 h-1 bg-white opacity-30 rounded-full"></div>
     </section>
   );
 };

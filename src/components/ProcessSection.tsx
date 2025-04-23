@@ -15,7 +15,7 @@ const ProcessSection = () => {
       number: '02',
       title: 'Think',
       description: 'Our strategic planning phase involves your dedicated account manager creating a roadmap for success.',
-      image: '/miller_design_work/MDZN Ab15.png'
+      image: '/miller_design_work/Kafe Cup 2 Matte.png'
     },
     {
       number: '03',

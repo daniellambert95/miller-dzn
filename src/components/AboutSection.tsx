@@ -10,9 +10,9 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
-            <div className="relative h-[500px] w-full rounded-xl overflow-hidden shadow-xl">
+            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl">
               <Image 
-                src="/miller_design_work/Kafe Cup 2 Matte.png" 
+                src="/miller_design_work/MDZN Ab15.png" 
                 alt="Miller Design Team" 
                 fill
                 className="object-cover"
@@ -23,8 +23,8 @@ const AboutSection = () => {
               
               {/* Image Caption */}
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="font-bold text-xl">Clap Ka-fe</h3>
-                <p className="opacity-80">Brand Identity Design</p>
+                <h3 className="font-bold text-xl">Detailed Design</h3>
+                <p className="opacity-80">Brand Identity in Motion</p>
               </div>
             </div>
             
