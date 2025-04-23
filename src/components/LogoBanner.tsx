@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 // Use all 8 logos
@@ -16,9 +16,6 @@ const clientLogos = [
 ];
 
 const LogoBanner = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const duplicateRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className="py-10 bg-white overflow-hidden border-t border-b border-gray-200">
       <div className="container-custom">
