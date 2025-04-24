@@ -30,9 +30,19 @@ const HeroSection = () => {
     <section 
       id="hero" 
       className="min-h-screen flex items-center relative overflow-hidden pt-20" 
-      style={{ backgroundColor: '#04b9d6' }}
       ref={containerRef}
     >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/background/Background Top.png"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      
       {/* Particles Background */}
       <Particles
         className="absolute inset-0 z-0"
