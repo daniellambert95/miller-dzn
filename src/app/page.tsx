@@ -16,9 +16,9 @@ export default function Home() {
       <HeroSection />
       <LogoBanner />
       <AboutSection />
+      <ProcessSection />
       <ValueProposition />
       <ServicesSection />
-      <ProcessSection />
       <PricingSection />
       <ContactSection />
       <Footer />

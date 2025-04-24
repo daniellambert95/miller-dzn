@@ -3,14 +3,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AnimatedBeam } from './AnimatedBeam';
-import { Climate_Crisis } from 'next/font/google';
+import localFont from 'next/font/local';
 import { CustomWordRotate } from "./CustomWordRotate";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Particles } from "@/components/magicui/particles";
 
-const climateCrisis = Climate_Crisis({
-  weight: '400',
-  subsets: ['latin'],
+const drukWide = localFont({
+  src: '../../public/fonts/Druk-Wide-Medium.ttf',
   display: 'swap',
 });
 
@@ -80,9 +79,9 @@ const HeroSection = () => {
             <div className={`mb-3 tracking-wider`}>
               <span className="font-bold">MILLER</span> <span className="font-light">DESIGN</span>
             </div>
-            <h1 className={`${climateCrisis.className} text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide`}>
+            <h1 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide`}>
               <HyperText 
-                className={`${climateCrisis.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
+                className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
                 duration={2000}
                 animateOnHover={true}
               > MDZN
@@ -95,9 +94,9 @@ const HeroSection = () => {
           </div>
           
           {/* Tagline */}
-          <div className={`${climateCrisis.className} text-xl md:text-2xl font-medium text-white mt-4`}>
+          <div className={`${drukWide.className} text-xl md:text-2xl font-medium text-white mt-4`}>
             <CustomWordRotate
-              className={`${climateCrisis.className} text-xl md:text-2xl font-medium text-white`}
+              className={`${drukWide.className} text-xl md:text-2xl font-medium text-white`}
               words={["Think it.", "Create it."]}
               duration={3000}
             />

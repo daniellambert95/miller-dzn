@@ -36,7 +36,7 @@ const LogoBanner = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={`logo-${index}`} 
-                className="logo-item grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="logo-item grayscale hover:grayscale-0 hover:brightness-0 hover:opacity-100 transition-all duration-300"
               >
                 <Image 
                   src={logo.path}
