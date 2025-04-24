@@ -66,7 +66,7 @@ const HeroSection = () => {
           {/* Logo Mark - Centered */}
           <div className="w-24 h-24 md:w-32 md:h-32 relative mb-4">
             <Image 
-              src="/miller_logos_icons/miller white.png" 
+              src="/miller_logos/miller white.png" 
               alt="Miller Design Icon" 
               fill
               className="object-contain"

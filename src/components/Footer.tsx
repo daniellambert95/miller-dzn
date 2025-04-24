@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="mb-8">
               <Image 
-                src="/miller_logos_icons/Miller Design Logo white.png" 
+                src="/miller_logos/Miller Design Logo white.png" 
                 alt="Miller Design Logo" 
                 width={150} 
                 height={50} 
