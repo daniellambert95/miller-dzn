@@ -76,9 +76,9 @@ const HeroSection = () => {
           
           {/* Brand Name - Centered */}
           <div className="text-center">
-            <div className={`mb-3 tracking-wider`}>
+            {/* <div className={`mb-3 tracking-wider`}>
               <span className="font-bold">MILLER</span> <span className="font-light">DESIGN</span>
-            </div>
+            </div> */}
             <h1 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide`}>
               <HyperText 
                 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
@@ -88,7 +88,7 @@ const HeroSection = () => {
               </HyperText>
             </h1>
             <h2 className={`text-2xl md:text-3xl font-medium text-white uppercase tracking-widest mt-2`}>
-            <span className="font-bold">DIGITAL</span> <span className="font-light">DISPLAY</span>
+            <span className="font-bold">Miller</span> <span className="font-light">Design</span>
 
             </h2>
           </div>

@@ -137,13 +137,7 @@ const PricingSection = () => {
                     ))}
                   </ul>
                   
-                  <div className="mt-10 p-6 bg-gray-50 rounded-lg">
-                    <h4 className="text-lg font-bold mb-2">Satisfaction Guaranteed</h4>
-                    <p className="text-gray-700">
-                      If you&apos;re not completely satisfied with our service within the first 14 days, 
-                      we&apos;ll refund your payment in full. No questions asked.
-                    </p>
-                  </div>
+
                 </div>
               </div>
             </div>
