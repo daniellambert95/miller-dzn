@@ -76,9 +76,9 @@ const HeroSection = () => {
           
           {/* Brand Name - Centered */}
           <div className="text-center">
-            {/* <div className={`mb-3 tracking-wider`}>
-              <span className="font-bold">MILLER</span> <span className="font-light">DESIGN</span>
-            </div> */}
+            <div className={`mb-3 tracking-wider`}>
+              <span className="font-bold">Your own remote,</span> <span className="font-light"> in house design team</span>
+            </div>
             <h1 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide`}>
               <HyperText 
                 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
@@ -103,8 +103,18 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Button */}
-          <a href="#contact" className="mt-8 bg-white text-primary-direct hover:bg-opacity-90 transition-colors px-10 py-3 font-medium rounded-full text-center inline-block" style={{ backgroundColor: '#ff4655', color: 'white' }}>
-            Free Quote!
+          <a 
+            href="#contact" 
+            className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+          >
+            <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
+            <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+            <span className="relative text-white font-semibold z-10 flex items-center">
+              Free Quote!
+              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
           </a>
         </div>
       </div>

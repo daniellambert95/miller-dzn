@@ -1,7 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 const AboutSection = () => {
   return (
@@ -51,15 +52,33 @@ const AboutSection = () => {
             
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>15+</h3>
+                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
+                  <NumberTicker 
+                    value={15} 
+                    className="text-primary text-4xl font-bold"
+                    style={{ color: '#04b9d6' }} 
+                  />+
+                </h3>
                 <p className="text-gray-700 font-medium">Years Experience</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>100+</h3>
+                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
+                  <NumberTicker 
+                    value={100} 
+                    className="text-primary text-4xl font-bold"
+                    style={{ color: '#04b9d6' }} 
+                  />+
+                </h3>
                 <p className="text-gray-700 font-medium">Global Clients</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>5k+</h3>
+                <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
+                  <NumberTicker 
+                    value={5} 
+                    className="text-primary text-4xl font-bold"
+                    style={{ color: '#04b9d6' }} 
+                  />k+
+                </h3>
                 <p className="text-gray-700 font-medium">Projects Completed</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
