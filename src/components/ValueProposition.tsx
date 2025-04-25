@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { NumberTicker } from "@/components/magicui/number-ticker";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
 const ValueProposition = () => {
