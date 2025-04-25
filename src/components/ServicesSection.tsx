@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const ServicesSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [, setHoveredIndex] = useState<number | null>(null);
 
   const coreValues = [
     {
