@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const ArtworkSection = () => {
   // State for active category with useEffect to prevent hydration mismatch
-  const [activeCategory, setActiveCategory] = useState<'all' | 'story' | 'branding'>('all');
+  const [activeCategory, setActiveCategory] = useState<'story' | 'branding'>('story');
   const [mounted, setMounted] = useState(false);
   
   // Mount effect to prevent hydration mismatch
@@ -117,9 +117,7 @@ const ArtworkSection = () => {
   
   // Get filtered images based on active category
   const getFilteredImages = () => {
-    if (activeCategory === 'all') {
-      return [...storyImages, ...wideImages];
-    } else if (activeCategory === 'story') {
+    if (activeCategory === 'story') {
       return storyImages;
     } else {
       return wideImages;
@@ -139,7 +137,7 @@ const ArtworkSection = () => {
   const inactiveTabClass = "hover:bg-gray-200";
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-gradient-to-br from-pink-200 to-pink-50 opacity-30 blur-3xl -z-10"></div>
       <div className="absolute bottom-40 right-0 w-80 h-80 rounded-full bg-gradient-to-tr from-purple-200 to-purple-50 opacity-30 blur-3xl -z-10"></div>
@@ -386,12 +384,6 @@ const ArtworkSection = () => {
             {mounted && (
               <div className="inline-flex rounded-full bg-gray-100 p-1 mb-8">
                 <button
-                  onClick={() => setActiveCategory('all')}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === 'all' ? activeTabClass : inactiveTabClass}`}
-                >
-                  All Work
-                </button>
-                <button
                   onClick={() => setActiveCategory('story')}
                   className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === 'story' ? activeTabClass : inactiveTabClass}`}
                 >
@@ -438,12 +430,6 @@ const ArtworkSection = () => {
               );
             })}
           </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <a href="#" className="inline-block px-10 py-4 rounded-full text-white font-medium bg-gradient-to-r from-pink-500 to-red-500 shadow-md hover:shadow-lg transition-all duration-300">
-            Our Creatives
-          </a>
         </div>
       </div>
 
