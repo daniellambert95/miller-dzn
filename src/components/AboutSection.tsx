@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { NumberTicker } from "@/components/magicui/number-ticker";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const AboutSection = () => {
   return (
@@ -21,8 +22,14 @@ const AboutSection = () => {
                 priority
               />
             </div>
-            {/* Animated Gradient Border */}
-            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl p-1 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500 animate-gradient-x z-10">
+            {/* BorderBeam Effect Around Image */}
+            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl z-10  md:px-4">
+              <BorderBeam 
+                size={120} 
+                duration={8} 
+                colorFrom="#04b9d6" 
+                colorTo="#12c2e9" 
+              />
               <div className="h-full w-full rounded-xl bg-white/80 backdrop-blur-md flex items-center justify-center">
                 <Image 
                   src="/miller_design_work/0S5A1356-Photoroom.png" 
