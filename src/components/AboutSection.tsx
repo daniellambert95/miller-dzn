@@ -13,17 +13,9 @@ const AboutSection = () => {
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
             {/* Hero Background Image */}
-            <div className="absolute inset-0 w-full h-full z-0">
-              <Image 
-                src="/miller_design_work/hero-bg.jpg" 
-                alt="Hero Background" 
-                fill
-                className="object-cover opacity-80 blur-sm"
-                priority
-              />
-            </div>
+           
             {/* BorderBeam Effect Around Image */}
-            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl z-10  md:px-4">
+            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl z-10 px-4">
               <BorderBeam 
                 size={120} 
                 duration={8} 
