@@ -49,7 +49,7 @@ const ValueProposition = () => {
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-sm text-gray-500">Impact factor</span>
-                  <div className="font-bold text-lg text-primary" style={{ color: '#04b9d6' }}>89%</div>
+                  <div className="font-bold text-lg text-primary" style={{ color: '#04b9d6' }}>90%</div>
                 </div>
               </div>
             </div>
@@ -96,11 +96,11 @@ const ValueProposition = () => {
               
               <div className="mt-auto relative z-10">
                 <div className="w-full bg-gray-100 rounded-full h-4 overflow-hidden">
-                  <div className="bg-gradient-to-r from-blue-400 to-blue-500 h-4 rounded-full" style={{ width: '6%' }}></div>
+                  <div className="bg-gradient-to-r from-blue-400 to-blue-500 h-4 rounded-full" style={{ width: '5%' }}></div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-sm text-gray-500">Impact factor</span>
-                  <div className="font-bold text-lg text-blue-600">6%</div>
+                  <div className="font-bold text-lg text-blue-600">5%</div>
                 </div>
               </div>
             </div>

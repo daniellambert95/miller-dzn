@@ -4,6 +4,7 @@ import LogoBanner from "@/components/LogoBanner";
 import AboutSection from "@/components/AboutSection";
 import ValueProposition from "@/components/ValueProposition";
 import ArtworkSection from "@/components/ArtworkSection";
+import VideosSection from "@/components/VideosSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <ProcessSection />
       <ValueProposition />
       <ArtworkSection />
+      <VideosSection />
       <ServicesSection />
       <PricingSection />
       <ContactSection />

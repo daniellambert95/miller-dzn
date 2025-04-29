@@ -17,11 +17,11 @@ const ArtworkSection = () => {
   const storyImages = [
     {
       src: "/Graphics/Story/VBLK2.png",
-      alt: "VBLK2 Poster"
+      alt: "BLK Arena Poster"
     },
     {
       src: "/Graphics/Story/TAGO MAGO DEMO.png",
-      alt: "TAGO MAGO DEMO Poster"
+      alt: "TAGO MAGO Dubai"
     },
     {
       src: "/Graphics/Story/Occult Poster - Chontane.png",
@@ -30,14 +30,6 @@ const ArtworkSection = () => {
     {
       src: "/Graphics/Story/Nebula Julian Jordan.png",
       alt: "Nebula Julian Jordan Poster"
-    },
-    {
-      src: "/Graphics/Story/NYE LDN 2024 OFFICIAL FLYER v2.png",
-      alt: "NYE LDN 2024 OFFICIAL FLYER"
-    },
-    {
-      src: "/Graphics/Story/Festive Brunch Flyer No Snow.png",
-      alt: "Festive Brunch Flyer"
     },
     {
       src: "/Graphics/Story/Endor Poster.png",
@@ -50,24 +42,32 @@ const ArtworkSection = () => {
     {
       src: "/Graphics/Story/Belters Only Poster.png",
       alt: "Belters Only Poster"
-    }
+    },
+    {
+      src: "/Graphics/Story/NYE LDN 2024 OFFICIAL FLYER v2.png",
+      alt: "Clap NYE Years Eve London"
+    },
+    {
+      src: "/Graphics/Story/Festive Brunch Flyer No Snow.png",
+      alt: "Festive Brunch Flyer"
+    },
   ];
   
   // Define images from Wide folder (branding & mockups)
   const wideImages = [
     {
       src: "/Graphics/Wide/Urban Wall Poster Mockup.png",
-      alt: "Urban Wall Poster Mockup",
+      alt: "Urban Wall Poster",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/TUMBLER MOCKUP FILE 3.png",
-      alt: "Tumbler Mockup",
+      alt: "Tumbler",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/TOTEBAG MOCKUP FILE.png",
-      alt: "Tote Bag Mockup",
+      alt: "Tote Bag",
       category: "branding"
     },
     {
@@ -82,12 +82,12 @@ const ArtworkSection = () => {
     },
     {
       src: "/Graphics/Wide/LIGHT BOX SIGN MOCKUP FILE.png",
-      alt: "Light Box Sign Mockup",
+      alt: "Light Box Sign",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/KIRA MOCKUP V2.png",
-      alt: "KIRA Mockup V2",
+      alt: "KIRA Branded Bags",
       category: "branding"
     },
     {
@@ -102,7 +102,7 @@ const ArtworkSection = () => {
     },
     {
       src: "/Graphics/Wide/Business Card Mockup_2aa.png",
-      alt: "Business Card Mockup",
+      alt: "Business Cards",
       category: "branding"
     }
   ];
@@ -137,7 +137,7 @@ const ArtworkSection = () => {
   const inactiveTabClass = "hover:bg-gray-200";
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
+    <section className="pt-16 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-gradient-to-br from-pink-200 to-pink-50 opacity-30 blur-3xl -z-10"></div>
       <div className="absolute bottom-40 right-0 w-80 h-80 rounded-full bg-gradient-to-tr from-purple-200 to-purple-50 opacity-30 blur-3xl -z-10"></div>
@@ -169,7 +169,13 @@ const ArtworkSection = () => {
               onClick={() => scrollToSection('gallery')}
               className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
             >
-              Full Gallery
+              Gallery
+            </button>
+            <button 
+              onClick={() => scrollToSection('videos')}
+              className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+            >
+              Videos
             </button>
           </div>
         </div>
@@ -282,26 +288,6 @@ const ArtworkSection = () => {
             {/* Mobile scroll indicator */}
             <div className="text-center text-gray-400 mt-2">
               <p className="text-xs">Swipe to see more</p>
-            </div>
-          </div>
-
-          {/* Bottom row with additional images */}
-          <div className="w-full mt-16">
-            <div className="flex overflow-x-auto md:overflow-visible justify-center gap-4 md:gap-8 px-2 md:px-0">
-              {storyImages.slice(5).map((image, index) => (
-                <div 
-                  key={index} 
-                  className="relative flex-shrink-0 w-[140px] md:w-[170px] h-[250px] md:h-[280px] shadow-md rounded-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2"
-                >
-                  <Image 
-                    src={image.src} 
-                    alt={image.alt}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="rounded-md"
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>

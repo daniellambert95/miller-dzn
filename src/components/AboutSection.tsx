@@ -11,24 +11,36 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
-            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl">
+            {/* Hero Background Image */}
+            <div className="absolute inset-0 w-full h-full z-0">
               <Image 
-                src="/miller_design_work/MDZN Ab15.png" 
-                alt="Miller Design Team" 
+                src="/miller_design_work/hero-bg.jpg" 
+                alt="Hero Background" 
                 fill
-                className="object-cover"
+                className="object-cover opacity-80 blur-sm"
+                priority
               />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              
-              {/* Image Caption */}
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="font-bold text-xl">Detailed Design</h3>
-                <p className="opacity-80">Brand Identity in Motion</p>
+            </div>
+            {/* Animated Gradient Border */}
+            <div className="relative h-[600px] w-full rounded-xl overflow-hidden shadow-xl p-1 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500 animate-gradient-x z-10">
+              <div className="h-full w-full rounded-xl bg-white/80 backdrop-blur-md flex items-center justify-center">
+                <Image 
+                  src="/miller_design_work/0S5A1356-Photoroom.png" 
+                  alt="Geoff Miller, CEO of Miller Design" 
+                  fill
+                  className="object-contain transition-transform duration-500 hover:scale-105"
+                />
+                {/* Floating SVG Shape */}
+                <svg className="absolute -top-8 -right-8 w-32 h-32 opacity-30 animate-spin-slow" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="40" stroke="#04b9d6" strokeWidth="8" strokeDasharray="12 8" />
+                </svg>
+                {/* Glassmorphism Caption Overlay */}
+                <div className="absolute bottom-6 left-6 bg-white/30 backdrop-blur-lg rounded-lg px-6 py-3 shadow-lg">
+                  <h3 className="font-bold text-xl text-[#04b9d6]">Geoff Miller</h3>
+                  <p className="opacity-80 text-gray-800">Founder & Creative Director</p>
+                </div>
               </div>
             </div>
-            
             {/* Decorative Elements */}
             <div className="absolute -top-8 -left-8 w-40 h-40 rounded-full bg-primary/10 -z-10"></div>
             <div className="absolute -bottom-8 -right-8 w-60 h-60 rounded-full bg-primary/20 -z-10"></div>
@@ -64,7 +76,7 @@ const AboutSection = () => {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-primary text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
                   <NumberTicker 
-                    value={100} 
+                    value={200} 
                     className="text-primary text-4xl font-bold"
                     style={{ color: '#04b9d6' }} 
                   />+

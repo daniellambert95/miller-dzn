@@ -58,7 +58,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="section bg-white relative overflow-hidden my-20">
+    <section id="process" className="section bg-white relative overflow-hidden my-8">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

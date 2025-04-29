@@ -80,7 +80,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section bg-white py-24 relative overflow-hidden">
+    <section id="services" className="section bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-purple-200 to-indigo-100 opacity-30 blur-3xl -z-10"></div>
       <div className="absolute -bottom-20 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-pink-200 to-cyan-100 opacity-30 blur-3xl -z-10"></div>
@@ -150,14 +150,14 @@ const ServicesSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/KIRA MOCKUP V2.png" 
+                src="/miller_design_work/Business Card Mockup_2aa.png" 
                 alt="KIRA Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="font-bold text-xl mb-1">KIRA</p>
+                <p className="font-bold text-xl mb-1">Premium Graphics</p>
                 <p className="text-sm text-gray-300">Brand Identity</p>
                 <div className="w-16 h-1 bg-gradient-to-r from-[#00e1ff] to-[#00b9d6] mt-2 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left shadow-[0_0_8px_rgba(0,225,255,0.6)]"></div>
               </div>
@@ -165,14 +165,14 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/MDZN Ab1.png" 
+                src="/miller_design_work/TOTEBAG MOCKUP FILE.png" 
                 alt="MDZN Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="font-bold text-xl mb-1">MDZN Abstract</p>
+                <p className="font-bold text-xl mb-1">Branding</p>
                 <p className="text-sm text-gray-300">Digital Art</p>
                 <div className="w-16 h-1 bg-indigo-500 mt-2 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -180,14 +180,14 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/Business Card Mockup_2aa.png" 
+                src="/miller_design_work/Macbook on Wooden Slats.png" 
                 alt="Business Card Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="font-bold text-xl mb-1">Business Cards</p>
+                <p className="font-bold text-xl mb-1">Animations</p>
                 <p className="text-sm text-gray-300">Print Design</p>
                 <div className="w-16 h-1 bg-pink-500 mt-2 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -195,14 +195,14 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/CLAP IBZ Invite.png" 
+                src="/miller_design_work/KIRA MOCKUP V2.png" 
                 alt="Club Invitation" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="font-bold text-xl mb-1">CLAP IBZ</p>
+                <p className="font-bold text-xl mb-1">Reels</p>
                 <p className="text-sm text-gray-300">Event Invitation</p>
                 <div className="w-16 h-1 bg-lime-500 mt-2 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>

@@ -75,7 +75,7 @@ const PricingSection = () => {
       )
     },
     {
-      text: 'Source files included (AI, PSD, etc.)',
+      text: 'Quick turnaround times with same-day delivery options',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -83,7 +83,7 @@ const PricingSection = () => {
       )
     },
     {
-      text: 'Quick turnaround times with same-day delivery options',
+      text: 'Videos/animations available on request',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

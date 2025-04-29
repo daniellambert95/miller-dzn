@@ -13,6 +13,16 @@ const drukWide = localFont({
   display: 'swap',
 });
 
+const nexaRegular = localFont({
+  src: '../../public/fonts/Nexa Regular.otf',
+  display: 'swap',
+});
+
+const stretchPro = localFont({
+  src: '../../public/fonts/StretchPro.otf',
+  display: 'swap',
+});
+
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const leftTopRef = useRef<HTMLDivElement>(null);
@@ -77,11 +87,11 @@ const HeroSection = () => {
           {/* Brand Name - Centered */}
           <div className="text-center">
             <div className={`mb-3 tracking-wider`}>
-              <span className="font-bold">Your own remote,</span> <span className="font-light"> in house design team</span>
+              <span className="font-bold">YOUR OWN REMOTE,</span> <span className="font-light"> DESIGN TEAM</span>
             </div>
             <h1 className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white tracking-wide`}>
               <HyperText 
-                className={`${drukWide.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
+                className={`${stretchPro.className} text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-wide`}
                 duration={2000}
                 animateOnHover={true}
               > MDZN
