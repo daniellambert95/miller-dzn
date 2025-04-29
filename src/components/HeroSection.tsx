@@ -13,11 +13,6 @@ const drukWide = localFont({
   display: 'swap',
 });
 
-const nexaRegular = localFont({
-  src: '../../public/fonts/Nexa Regular.otf',
-  display: 'swap',
-});
-
 const stretchPro = localFont({
   src: '../../public/fonts/StretchPro.otf',
   display: 'swap',
