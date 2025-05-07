@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const ArtworkSection = () => {
-  // State for active category with useEffect to prevent hydration mismatch
-  const [activeCategory, setActiveCategory] = useState<'story' | 'branding'>('story');
-  const [mounted, setMounted] = useState(false);
-  
-  // Mount effect to prevent hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // State for active category
+  const [activeCategory] = useState<'story' | 'branding'>('story');
   
   // Define images from Story folder (event posters)
   const storyImages = [
@@ -35,10 +29,6 @@ const ArtworkSection = () => {
       src: "/Graphics/Story/Endor Poster.png",
       alt: "Endor Event Poster - Creative Design Solutions Dubai"
     },
-    // {
-    //   src: "/Graphics/Story/Clap IBZ Friends and Family Invite 2025.png",
-    //   alt: "Clap IBZ Friends and Family Invite"
-    // },
     {
       src: "/Graphics/Story/Belters Only Poster.png",
       alt: "Belters Only Event Poster - Professional Graphic Design Dubai"
@@ -115,15 +105,6 @@ const ArtworkSection = () => {
   // Reference for scroll functionality
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   
-  // Get filtered images based on active category
-  const getFilteredImages = () => {
-    if (activeCategory === 'story') {
-      return storyImages;
-    } else {
-      return wideImages;
-    }
-  };
-  
   // Scroll to section function
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -131,10 +112,6 @@ const ArtworkSection = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  
-  // CSS classes for active/inactive tab states
-  const activeTabClass = "bg-cyan-500 text-white shadow-md";
-  const inactiveTabClass = "hover:bg-gray-200";
 
   return (
     <section className="pt-16 bg-white relative overflow-hidden">
@@ -164,12 +141,6 @@ const ArtworkSection = () => {
               className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
             >
               Branding
-            </button>
-            <button 
-              onClick={() => scrollToSection('gallery')}
-              className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
-            >
-              Gallery
             </button>
             <button 
               onClick={() => scrollToSection('videos')}
@@ -348,9 +319,7 @@ const ArtworkSection = () => {
             <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
-         
         </div>
-
 
         {/* Complete Portfolio Button */}
         <div className="flex justify-center mb-24">
