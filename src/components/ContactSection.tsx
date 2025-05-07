@@ -158,17 +158,7 @@ const ContactSection = () => {
                 />
               </div>
               
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  placeholder="Subject"
-                  className="w-full rounded-md border-gray-300 shadow-sm px-4 py-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
+              <input type="hidden" name="subject" value="MDZN creative inquiry from website" />
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
