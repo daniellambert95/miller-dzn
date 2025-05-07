@@ -107,7 +107,7 @@ const ValueProposition = () => {
           </div>
         </div>
         
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <div className="relative max-w-3xl mx-auto py-8 px-8 md:px-12 bg-white rounded-xl border border-transparent shadow-md overflow-hidden">
             <p className="text-gray-700 text-lg leading-relaxed font-medium">
               Our commitment to quality ensures that your campaigns not only look beautiful 
@@ -120,6 +120,23 @@ const ValueProposition = () => {
               colorTo="#12c2e9" 
             />
           </div>
+        </div>
+        {/* CTA Button */}
+        <div className="flex my-6 justify-center">
+          <a 
+            href="#contact" 
+            className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+            aria-label="Get a free quote for your design project"
+          >
+            <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
+            <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+            <span className="relative text-white font-semibold z-10 flex items-center">
+              Free Quote!
+              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
     </section>
