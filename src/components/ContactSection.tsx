@@ -1,8 +1,59 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+  const formRef = React.useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    const formData = new FormData(e.currentTarget);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formData.get('name'),
+          email: formData.get('email'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({ 
+          type: 'success', 
+          message: 'Thank you for your message! We will get back to you as soon as possible.' 
+        });
+        formRef.current?.reset();
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message || 'Something went wrong. Please try again later.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Something went wrong. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="section bg-white">
       <div className="container-custom">
@@ -74,12 +125,22 @@ const ContactSection = () => {
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
             
-            <form className="space-y-4">
+            {submitStatus.type && (
+              <div className={`mb-6 p-4 rounded-md ${
+                submitStatus.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+              }`}>
+                {submitStatus.message}
+              </div>
+            )}
+            
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   placeholder="Your name"
                   className="w-full rounded-md border-gray-300 shadow-sm px-4 py-2 focus:ring-primary focus:border-primary"
                 />
@@ -90,6 +151,8 @@ const ContactSection = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   placeholder="Your email"
                   className="w-full rounded-md border-gray-300 shadow-sm px-4 py-2 focus:ring-primary focus:border-primary"
                 />
@@ -100,6 +163,8 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  required
                   placeholder="Subject"
                   className="w-full rounded-md border-gray-300 shadow-sm px-4 py-2 focus:ring-primary focus:border-primary"
                 />
@@ -109,13 +174,25 @@ const ContactSection = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows={4}
                   placeholder="Your message"
                   className="w-full rounded-md border-gray-300 shadow-sm px-4 py-2 focus:ring-primary focus:border-primary"
                 ></textarea>
               </div>
+
+              <div className="flex justify-center">
+                {/* reCAPTCHA removed */}
+              </div>
               
-              <button type="submit" className="btn-primary w-full">Send Message</button>
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
         </div>

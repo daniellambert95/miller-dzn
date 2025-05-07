@@ -17,23 +17,23 @@ const ArtworkSection = () => {
   const storyImages = [
     {
       src: "/Graphics/Story/VBLK2.png",
-      alt: "BLK Arena Poster"
+      alt: "BLK Arena Event Poster - Professional Graphic Design by Miller Design Dubai"
     },
     {
       src: "/Graphics/Story/TAGO MAGO DEMO.png",
-      alt: "TAGO MAGO Dubai"
+      alt: "TAGO MAGO Dubai Event Poster - Creative Design Agency Dubai"
     },
     {
       src: "/Graphics/Story/Occult Poster - Chontane.png",
-      alt: "Occult Poster - Chontane"
+      alt: "Occult Poster for Chontane - Premium Event Design Dubai"
     },
     {
       src: "/Graphics/Story/Nebula Julian Jordan.png",
-      alt: "Nebula Julian Jordan Poster"
+      alt: "Nebula Julian Jordan Event Poster - Professional Event Design Dubai"
     },
     {
       src: "/Graphics/Story/Endor Poster.png",
-      alt: "Endor Poster"
+      alt: "Endor Event Poster - Creative Design Solutions Dubai"
     },
     // {
     //   src: "/Graphics/Story/Clap IBZ Friends and Family Invite 2025.png",
@@ -41,15 +41,15 @@ const ArtworkSection = () => {
     // },
     {
       src: "/Graphics/Story/Belters Only Poster.png",
-      alt: "Belters Only Poster"
+      alt: "Belters Only Event Poster - Professional Graphic Design Dubai"
     },
     {
       src: "/Graphics/Story/NYE LDN 2024 OFFICIAL FLYER v2.png",
-      alt: "Clap NYE Years Eve London"
+      alt: "New Year's Eve London 2024 Official Flyer - Premium Event Design"
     },
     {
       src: "/Graphics/Story/Festive Brunch Flyer No Snow.png",
-      alt: "Festive Brunch Flyer"
+      alt: "Festive Brunch Flyer Design - Creative Event Marketing Dubai"
     },
   ];
   
@@ -57,52 +57,52 @@ const ArtworkSection = () => {
   const wideImages = [
     {
       src: "/Graphics/Wide/Urban Wall Poster Mockup.png",
-      alt: "Urban Wall Poster",
+      alt: "Urban Wall Poster Mockup - Professional Branding Design Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/TUMBLER MOCKUP FILE 3.png",
-      alt: "Tumbler",
+      alt: "Custom Branded Tumbler Design - Brand Merchandise Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/TOTEBAG MOCKUP FILE.png",
-      alt: "Tote Bag",
+      alt: "Custom Branded Tote Bag Design - Brand Merchandise Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/Mockup.png",
-      alt: "Generic Mockup",
+      alt: "Professional Brand Mockup - Creative Design Agency Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/Macbook on Wooden Slats.png",
-      alt: "Macbook on Wooden Slats",
+      alt: "Macbook Brand Presentation - Digital Design Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/LIGHT BOX SIGN MOCKUP FILE.png",
-      alt: "Light Box Sign",
+      alt: "Light Box Sign Design - Professional Branding Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/KIRA MOCKUP V2.png",
-      alt: "KIRA Branded Bags",
+      alt: "KIRA Branded Bags Collection - Premium Branding Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/KIRA Apron.png",
-      alt: "KIRA Apron",
+      alt: "KIRA Branded Apron Design - Professional Brand Merchandise Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/DJ Tennis.png",
-      alt: "DJ Tennis",
+      alt: "DJ Tennis Brand Design - Creative Branding Dubai",
       category: "branding"
     },
     {
       src: "/Graphics/Wide/Business Card Mockup_2aa.png",
-      alt: "Business Cards",
+      alt: "Professional Business Card Design - Corporate Branding Dubai",
       category: "branding"
     }
   ];
@@ -321,9 +321,6 @@ const ArtworkSection = () => {
                     className="object-contain"
                   />
                 </div>
-                <div className="p-3 bg-white">
-                  <p className="text-gray-800 font-medium">{image.alt}</p>
-                </div>
               </div>
             ))}
           </div>
@@ -347,9 +344,6 @@ const ArtworkSection = () => {
                         unoptimized
                         className="object-contain"
                       />
-                    </div>
-                    <div className="p-3 bg-white">
-                      <p className="text-gray-800 text-sm font-medium">{image.alt}</p>
                     </div>
                   </div>
                 ))}
@@ -409,13 +403,22 @@ const ArtworkSection = () => {
                       className={isWideImage ? "object-contain" : "object-cover"}
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-white bg-opacity-80">
-                    <p className="text-gray-800 font-medium text-sm">{image.alt}</p>
-                  </div>
                 </div>
               );
             })}
           </div>
+        </div>
+
+        {/* Complete Portfolio Button */}
+        <div className="flex justify-center mt-16 mb-20">
+          <a
+            href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-1/2 max-w-2xl block text-center bg-sky-400 hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 transition-colors duration-200 shadow-md"
+          >
+            Complete Portfolio
+          </a>
         </div>
       </div>
 

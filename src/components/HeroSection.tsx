@@ -40,10 +40,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/background/Background Top.png"
-          alt="Hero Background"
+          alt="Miller Design Dubai - Professional Graphic Design Agency Background"
           fill
           className="object-cover"
           priority
+          quality={100}
         />
       </div>
       
@@ -57,7 +58,7 @@ const HeroSection = () => {
       />
       
       {/* Wave Decoration Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0" aria-hidden="true">
         <svg className="absolute -left-20 top-0 h-full w-40 text-white opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0,0 C40,50 40,50 0,100 L0,0 Z" fill="currentColor" />
         </svg>
@@ -72,10 +73,11 @@ const HeroSection = () => {
           <div className="w-24 h-24 md:w-32 md:h-32 relative mb-4">
             <Image 
               src="/miller_logos/miller white.png" 
-              alt="Miller Design Icon" 
+              alt="Miller Design Dubai Logo - Professional Graphic Design Agency" 
               fill
               className="object-contain"
               priority
+              quality={100}
             />
           </div>
           
@@ -93,8 +95,7 @@ const HeroSection = () => {
               </HyperText>
             </h1>
             <h2 className={`text-2xl md:text-3xl font-medium text-white uppercase tracking-widest mt-2`}>
-            <span className="font-bold">Miller</span> <span className="font-light">Design</span>
-
+              <span className="font-bold">Miller</span> <span className="font-light">Design</span>
             </h2>
           </div>
           
@@ -111,12 +112,13 @@ const HeroSection = () => {
           <a 
             href="#contact" 
             className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+            aria-label="Get a free quote for your design project"
           >
             <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
             <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
             <span className="relative text-white font-semibold z-10 flex items-center">
               Free Quote!
-              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </span>
