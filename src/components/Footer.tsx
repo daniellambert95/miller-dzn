@@ -115,7 +115,12 @@ const Footer = () => {
           </p>
           
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            Webdesign by Site & Sight.
+          Webdesign by 
+            <a href="https://instagram.com/site_and_sight" target="_blank" className="hover:text-[#04b9d6]">
+              <span className="text-[#04b9d6]"> Site</span>
+              & 
+              <span className="text-[#04b9d6]">Sight</span>
+            </a>
           </p>
           
           
