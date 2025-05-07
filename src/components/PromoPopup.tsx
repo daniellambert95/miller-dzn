@@ -65,7 +65,7 @@ const PromoPopup = () => {
                 First timers go free!
               </h2>
               <p className="text-gray-600 mb-4">
-                If you're a first time customer of Miller Design your first poster is on us, that's a fully custom static flyer to your preference completely free.
+                If you&apos;re a first time customer of Miller Design your first poster is on us, that&apos;s a fully custom static flyer to your preference completely free.
               </p>
               <p className="text-sm text-gray-500 mb-6">
                 Contact us to collect your creative!
