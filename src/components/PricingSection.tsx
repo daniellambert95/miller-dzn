@@ -143,7 +143,7 @@ const PricingSection = () => {
                     <p className="text-white/90 mb-10 text-lg">All-inclusive design partnership</p>
                     
                     <div className="mb-10 flex items-baseline">
-                      <span className="text-7xl font-bold tracking-tight">$1997</span>
+                      <span className="text-7xl font-bold tracking-tight">€1997</span>
                       <span className="text-white/80 ml-2 text-xl">/month</span>
                     </div>
                     

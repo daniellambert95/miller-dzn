@@ -10,6 +10,7 @@ import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ClientPromoPopup from "@/components/ClientPromoPopup";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <PricingSection />
       <ContactSection />
       <Footer />
+      <ClientPromoPopup />
     </main>
   );
 }

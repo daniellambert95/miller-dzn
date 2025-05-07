@@ -322,7 +322,7 @@ const ArtworkSection = () => {
           
           {/* Horizontal scroll for additional branding items */}
           <div className="mt-12 relative">
-            <div className="overflow-x-auto pb-8 custom-scrollbar">
+            <div className="overflow-x-auto custom-scrollbar">
               <div className="flex gap-6 px-4 min-w-max">
                 {wideImages.slice(3).map((image, index) => (
                   <div 
@@ -348,81 +348,12 @@ const ArtworkSection = () => {
             <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
-              {/* CTA Button */}
-          <div className="flex my-6 justify-center">
-            <a 
-              href="#contact" 
-              className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
-              aria-label="Get a free quote for your design project"
-            >
-              <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
-              <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-              <span className="relative text-white font-semibold z-10 flex items-center">
-                Free Quote!
-                <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-            </a>
-          </div>
+         
         </div>
 
-        {/* Full Gallery Section */}
-        <div id="gallery" className="mb-20">
-          <div className="mb-12 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Complete Gallery</h3>
-            
-            {/* Gallery filter tabs - only render when mounted to prevent hydration mismatch */}
-            {mounted && (
-              <div className="inline-flex rounded-full bg-gray-100 p-1 mb-8">
-                <button
-                  onClick={() => setActiveCategory('story')}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === 'story' ? activeTabClass : inactiveTabClass}`}
-                >
-                  Event Posters
-                </button>
-                <button
-                  onClick={() => setActiveCategory('branding')}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === 'branding' ? activeTabClass : inactiveTabClass}`}
-                >
-                  Branding
-                </button>
-              </div>
-            )}
-          </div>
-          
-          {/* Masonry/grid gallery - only show when mounted to prevent hydration mismatch */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {mounted && getFilteredImages().map((image, index) => {
-              const isWideImage = image.src.includes('/Wide/');
-              return (
-                <div 
-                  key={index}
-                  className={`group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl bg-white ${
-                    isWideImage 
-                      ? 'aspect-video col-span-1 md:col-span-2' 
-                      : 'aspect-[9/16]'
-                  }`}
-                >
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes={isWideImage ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"}
-                      loader={({ src }) => src}
-                      unoptimized={isWideImage}
-                      className={isWideImage ? "object-contain" : "object-cover"}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Complete Portfolio Button */}
-        <div className="flex justify-center mt-16 mb-20">
+        <div className="flex justify-center mb-24">
           <a
             href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
             target="_blank"
