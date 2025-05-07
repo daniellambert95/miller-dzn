@@ -44,7 +44,7 @@ const ContactSection = () => {
           message: result.message || 'Something went wrong. Please try again later.'
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: 'Something went wrong. Please try again later.'

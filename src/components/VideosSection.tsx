@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from 'react';
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
-import Image from 'next/image';
 
 interface Video {
   title: string;
