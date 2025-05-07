@@ -4,9 +4,6 @@ import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const ArtworkSection = () => {
-  // State for active category
-  const [activeCategory] = useState<'story' | 'branding'>('story');
-  
   // Define images from Story folder (event posters)
   const storyImages = [
     {
