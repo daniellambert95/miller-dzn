@@ -18,13 +18,13 @@ const videos: Video[] = [
     featured: true
   },
   {
-    title: "Clap London Teaser",
-    src: "/videos/Clap London Teaser 1.mp4",
-    thumbnail: "/videos/Clap London Teaser 1.mp4",
+    title: "Ushuaia Dubai Trailer",
+    src: "/videos/Michael Bibi Ushuaia Dubai Trailer.mp4",
+    thumbnail: "/videos/Michael Bibi Ushuaia Dubai Trailer.mp4",
     featured: false
   },
   {
-    title: "CLAP IBZ NOW OPEN TEASER",
+    title: "Clap Ibiza Trailer",
     src: "/videos/CLAP IBZ NOW OPEN TEASER.mp4",
     thumbnail: "/videos/CLAP IBZ NOW OPEN TEASER.mp4",
     featured: false
@@ -36,7 +36,7 @@ const videos: Video[] = [
     featured: false
   },
   {
-    title: "LS 3D Teaser",
+    title: "Summer sessions",
     src: "/videos/LS 3D Teaser.mp4",
     thumbnail: "/videos/LS 3D Teaser.mp4",
     featured: false
@@ -109,7 +109,26 @@ const VideosSection = () => {
             ))}
           </div>
         </div>
+        
       </div>
+      {/* CTA Button */}
+      <div className="flex my-6 justify-center">
+        <a 
+          href="#contact" 
+          className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+          aria-label="Get a free quote for your design project"
+        >
+          <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
+          <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+          <span className="relative text-white font-semibold z-10 flex items-center">
+            Free Quote!
+            <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      
     </section>
   );
 };

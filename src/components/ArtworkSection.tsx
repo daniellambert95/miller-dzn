@@ -284,11 +284,6 @@ const ArtworkSection = () => {
                 </div>
               ))}
             </div>
-            
-            {/* Mobile scroll indicator */}
-            <div className="text-center text-gray-400 mt-2">
-              <p className="text-xs">Swipe to see more</p>
-            </div>
           </div>
         </div>
 
@@ -353,6 +348,23 @@ const ArtworkSection = () => {
             <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
+              {/* CTA Button */}
+          <div className="flex my-6 justify-center">
+            <a 
+              href="#contact" 
+              className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+              aria-label="Get a free quote for your design project"
+            >
+              <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
+              <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+              <span className="relative text-white font-semibold z-10 flex items-center">
+                Free Quote!
+                <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
 
         {/* Full Gallery Section */}
@@ -415,7 +427,7 @@ const ArtworkSection = () => {
             href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/2 max-w-2xl block text-center bg-sky-400 hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 transition-colors duration-200 shadow-md"
+            className="w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 transition-colors duration-200 shadow-md"
           >
             Complete Portfolio
           </a>
