@@ -324,7 +324,7 @@ const ArtworkSection = () => {
           </div>
           
           {/* Auto-scrolling carousel for branding items - identical to event posters */}
-          <div className="relative mx-12 md:ml-16 overflow-hidden mt-16">
+          <div className="relative mx-4 sm:mx-6 md:ml-16 overflow-hidden mt-16">
             <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaBrandingRef}>
               <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
                 {wideImages.slice(3).map((image, index) => (
