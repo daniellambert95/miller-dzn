@@ -166,7 +166,7 @@ const ArtworkSection = () => {
                       alt={leftGroup[0].alt}
                       fill
                       className="object-cover rounded-md"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -177,7 +177,7 @@ const ArtworkSection = () => {
                       alt={leftGroup[1].alt}
                       fill
                       className="object-cover rounded-md"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -191,7 +191,7 @@ const ArtworkSection = () => {
                     alt={center.alt}
                     fill
                     className="object-cover rounded-md"
-                    priority
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -205,7 +205,7 @@ const ArtworkSection = () => {
                       alt={rightGroup[0].alt}
                       fill
                       className="object-cover rounded-md"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const ArtworkSection = () => {
                       alt={rightGroup[1].alt}
                       fill
                       className="object-cover rounded-md"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -246,7 +246,7 @@ const ArtworkSection = () => {
                       fill
                       style={{ objectFit: 'cover' }}
                       className="rounded-md"
-                      priority={index < 3}
+                      loading={index < 2 ? "lazy" : "lazy"}
                     />
                   </div>
                 </div>
@@ -282,6 +282,7 @@ const ArtworkSection = () => {
                     loader={({ src }) => src}
                     unoptimized
                     className="object-contain"
+                    loading={index === 0 ? "lazy" : "lazy"}
                   />
                 </div>
               </div>
@@ -306,6 +307,7 @@ const ArtworkSection = () => {
                         loader={({ src }) => src}
                         unoptimized
                         className="object-contain"
+                        loading="lazy"
                       />
                     </div>
                   </div>

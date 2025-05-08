@@ -172,9 +172,6 @@ const ContactSection = () => {
                 ></textarea>
               </div>
 
-              <div className="flex justify-center">
-                {/* reCAPTCHA removed */}
-              </div>
               
               <button 
                 type="submit" 
