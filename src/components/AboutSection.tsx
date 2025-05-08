@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const AboutSection = () => {
   return (
@@ -28,6 +29,7 @@ const AboutSection = () => {
                   alt="Geoff Miller, CEO of Miller Design" 
                   fill
                   className="object-contain transition-transform duration-500 hover:scale-105"
+                  loader={bunnyImageLoader}
                 />
                 {/* Floating SVG Shape */}
                 <svg className="absolute -top-8 -right-8 w-32 h-32 opacity-30 animate-spin-slow" viewBox="0 0 100 100" fill="none">

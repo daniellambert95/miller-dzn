@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 // Use all 8 logos
 const clientLogos = [
@@ -44,6 +45,7 @@ const LogoBanner = () => {
                   width={120}
                   height={40}
                   className="object-contain"
+                  loader={bunnyImageLoader}
                 />
               </div>
             ))}
@@ -60,6 +62,7 @@ const LogoBanner = () => {
                   width={120}
                   height={40}
                   className="object-contain"
+                  loader={bunnyImageLoader}
                 />
               </div>
             ))}

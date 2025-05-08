@@ -7,6 +7,7 @@ import localFont from 'next/font/local';
 import { CustomWordRotate } from "./CustomWordRotate";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Particles } from "@/components/magicui/particles";
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const drukWide = localFont({
   src: '../../public/fonts/Druk-Wide-Medium.ttf',
@@ -44,7 +45,8 @@ const HeroSection = () => {
           fill
           className="object-cover"
           priority
-          quality={100}
+          quality={75}
+          loader={bunnyImageLoader}
         />
       </div>
       
@@ -78,6 +80,7 @@ const HeroSection = () => {
               className="object-contain"
               priority
               quality={100}
+              loader={bunnyImageLoader}
             />
           </div>
           

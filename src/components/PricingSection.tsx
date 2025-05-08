@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const PricingSection = () => {
   const features = [
@@ -229,6 +230,7 @@ const PricingSection = () => {
                   alt="Featured Design Work" 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  loader={bunnyImageLoader}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
                 

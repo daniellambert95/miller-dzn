@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,6 +50,7 @@ const Footer = () => {
                 width={150} 
                 height={50} 
                 className="h-auto" 
+                loader={bunnyImageLoader}
               />
             </div>
             

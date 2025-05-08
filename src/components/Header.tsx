@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ const Header = () => {
                 height={40} 
                 className="h-auto" 
                 priority
+                loader={bunnyImageLoader}
               />
             ) : (
               <Image 
@@ -48,6 +50,7 @@ const Header = () => {
                 height={40} 
                 className="h-auto" 
                 priority
+                loader={bunnyImageLoader}
               />
             )}
           </Link>
@@ -64,6 +67,7 @@ const Header = () => {
                 height={40} 
                 className="h-auto" 
                 priority
+                loader={bunnyImageLoader}
               />
             ) : (
               <Image 
@@ -73,6 +77,7 @@ const Header = () => {
                 height={40} 
                 className="h-auto" 
                 priority
+                loader={bunnyImageLoader}
               />
             )}
           </Link>

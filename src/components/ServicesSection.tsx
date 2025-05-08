@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const ServicesSection = () => {
   const [, setHoveredIndex] = useState<number | null>(null);
@@ -151,9 +152,10 @@ const ServicesSection = () => {
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
                 src="/miller_design_work/Business Card Mockup_2aa.webp" 
-                alt="KIRA Design" 
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Branding Services - Miller Design Dubai" 
+                fill 
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                loader={bunnyImageLoader}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">

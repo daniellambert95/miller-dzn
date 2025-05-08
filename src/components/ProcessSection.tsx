@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const drukWide = localFont({
   src: '../../public/fonts/Druk-Wide-Medium.ttf',
@@ -63,10 +64,11 @@ const ProcessSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/background/Background Top.webp"
-          alt="Process Background"
+          alt="Background for Process Section"
           fill
           className="object-cover"
           priority
+          loader={bunnyImageLoader}
         />
         <div className="absolute inset-0 bg-[#04b9d6]/90"></div>
       </div>

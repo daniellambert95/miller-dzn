@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const ArtworkSection = () => {
   // Define images from Story folder (event posters)
@@ -175,6 +176,21 @@ const ArtworkSection = () => {
     })
   ]);
   
+  // Embla carousel for branding section
+  const [emblaBrandingRef] = useEmblaCarousel({ 
+    loop: true,
+    align: 'start',
+    skipSnaps: false,
+    containScroll: 'trimSnaps'
+  }, [
+    AutoScroll({ 
+      speed: 0.8,
+      direction: 'forward',
+      stopOnInteraction: false,
+      playOnInit: true
+    })
+  ]);
+  
   // Scroll to section function
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -249,7 +265,7 @@ const ArtworkSection = () => {
                 {storyImages.map((image, index) => (
                   <div 
                     key={index} 
-                    className="embla__slide flex-shrink-0 min-w-[160px] md:min-w-[200px] w-[160px] md:w-[200px] h-[290px] md:h-[360px] shadow-md rounded-md overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1"
+                    className="embla__slide flex-shrink-0 min-w-[160px] md:min-w-[200px] w-[160px] md:w-[200px] h-[290px] md:h-[360px] shadow-md rounded-md overflow-hidden cursor-pointer"
                     onClick={() => openModal(image)}
                   >
                     <div className="relative w-full h-full">
@@ -260,6 +276,7 @@ const ArtworkSection = () => {
                         priority={index < 5}
                         style={{ objectFit: 'cover' }}
                         className="rounded-md"
+                        loader={bunnyImageLoader}
                       />
                     </div>
                   </div>
@@ -287,7 +304,7 @@ const ArtworkSection = () => {
             {wideImages.slice(0, 3).map((image, index) => (
               <div 
                 key={index}
-                className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white cursor-pointer transform hover:scale-[1.02]"
+                className="group relative rounded-xl overflow-hidden shadow-md bg-white cursor-pointer"
                 onClick={() => openModal(image)}
               >
                 <div className="relative h-[280px] w-full">
@@ -296,43 +313,42 @@ const ArtworkSection = () => {
                     alt={image.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    loader={({ src }) => src}
-                    unoptimized
-                    className="object-contain"
+                    loader={bunnyImageLoader}
+                    priority={index === 0}
+                    style={{ objectFit: 'cover' }}
+                    className="rounded-md"
                   />
                 </div>
               </div>
             ))}
           </div>
           
-          {/* Horizontal scroll for additional branding items */}
-          <div className="mt-12 relative">
-            <div className="overflow-x-auto custom-scrollbar">
-              <div className="flex gap-6 px-4 min-w-max">
+          {/* Auto-scrolling carousel for branding items - identical to event posters */}
+          <div className="relative mx-12 md:ml-16 overflow-hidden mt-16">
+            <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaBrandingRef}>
+              <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
                 {wideImages.slice(3).map((image, index) => (
                   <div 
-                    key={index}
-                    className="flex-shrink-0 group relative w-[280px] h-[220px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white cursor-pointer transform hover:scale-[1.02]"
+                    key={index} 
+                    className="embla__slide flex-shrink-0 min-w-[200px] md:min-w-[250px] w-[200px] md:w-[250px] h-[180px] md:h-[200px] shadow-md rounded-md overflow-hidden cursor-pointer"
                     onClick={() => openModal(image)}
                   >
-                    <div className="relative h-[180px] w-full">
-                      <Image
-                        src={image.src}
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src={image.src} 
                         alt={image.alt}
                         fill
-                        sizes="280px"
-                        loader={({ src }) => src}
-                        unoptimized
-                        className="object-contain"
+                        loader={bunnyImageLoader}
+                        style={{ objectFit: 'cover' }}
+                        className="rounded-md"
                       />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            {/* Scroll indicators */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+            {/* Gradient fades for the carousel edges */}
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </div>
 
@@ -360,6 +376,7 @@ const ArtworkSection = () => {
                 fill
                 style={{ objectFit: 'contain' }}
                 className="rounded-md"
+                loader={bunnyImageLoader}
               />
             </div>
             <button 
@@ -376,6 +393,18 @@ const ArtworkSection = () => {
 
       {/* Custom scrollbar style */}
       <style jsx global>{`
+        .custom-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+          scroll-behavior: smooth;
+          cursor: grab;
+          user-select: none;
+          will-change: scroll-position;
+          overscroll-behavior-x: none;
+        }
+        
         .custom-scrollbar::-webkit-scrollbar {
           display: none;
         }
