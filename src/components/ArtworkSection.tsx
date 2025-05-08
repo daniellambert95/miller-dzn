@@ -324,7 +324,7 @@ const ArtworkSection = () => {
             href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 transition-colors duration-200 shadow-md"
+            className="w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 px-4 transition-colors duration-200 shadow-md"
           >
             Complete Portfolio
           </a>
