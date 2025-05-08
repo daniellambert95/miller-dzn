@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 
 const ArtworkSection = () => {
@@ -110,8 +110,6 @@ const ArtworkSection = () => {
     }
   };
 
-  const [firstImageLoaded, setFirstImageLoaded] = useState(false);
-
   return (
     <section className="pt-16 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
@@ -168,8 +166,6 @@ const ArtworkSection = () => {
                       alt={leftGroup[0].alt}
                       fill
                       className="object-cover rounded-md"
-                      loading={firstImageLoaded ? "eager" : "lazy"}
-                      onLoad={() => setFirstImageLoaded(true)}
                     />
                   </div>
                 </div>
@@ -180,8 +176,6 @@ const ArtworkSection = () => {
                       alt={leftGroup[1].alt}
                       fill
                       className="object-cover rounded-md"
-                      loading={firstImageLoaded ? "eager" : "lazy"}
-                      onLoad={() => setFirstImageLoaded(true)}
                     />
                   </div>
                 </div>
@@ -195,8 +189,6 @@ const ArtworkSection = () => {
                     alt={center.alt}
                     fill
                     className="object-cover rounded-md"
-                    loading={firstImageLoaded ? "eager" : "lazy"}
-                    onLoad={() => setFirstImageLoaded(true)}
                   />
                 </div>
               </div>
@@ -210,8 +202,6 @@ const ArtworkSection = () => {
                       alt={rightGroup[0].alt}
                       fill
                       className="object-cover rounded-md"
-                      loading={firstImageLoaded ? "eager" : "lazy"}
-                      onLoad={() => setFirstImageLoaded(true)}
                     />
                   </div>
                 </div>
@@ -222,8 +212,6 @@ const ArtworkSection = () => {
                       alt={rightGroup[1].alt}
                       fill
                       className="object-cover rounded-md"
-                      loading={firstImageLoaded ? "eager" : "lazy"}
-                      onLoad={() => setFirstImageLoaded(true)}
                     />
                   </div>
                 </div>
@@ -253,7 +241,6 @@ const ArtworkSection = () => {
                       fill
                       style={{ objectFit: 'cover' }}
                       className="rounded-md"
-                      loading={firstImageLoaded ? "eager" : "lazy"}
                     />
                   </div>
                 </div>
@@ -289,7 +276,6 @@ const ArtworkSection = () => {
                     loader={({ src }) => src}
                     unoptimized
                     className="object-contain"
-                    loading={firstImageLoaded ? "eager" : "lazy"}
                   />
                 </div>
               </div>
@@ -314,7 +300,6 @@ const ArtworkSection = () => {
                         loader={({ src }) => src}
                         unoptimized
                         className="object-contain"
-                        loading={firstImageLoaded ? "eager" : "lazy"}
                       />
                     </div>
                   </div>
