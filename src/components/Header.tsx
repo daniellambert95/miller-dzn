@@ -33,7 +33,7 @@ const Header = () => {
             {/* Use white logo when not scrolled, regular logo when scrolled or menu open */}
             {isScrolled || isMenuOpen ? (
               <Image 
-                src="/miller_logos/Miller Design Logo.webp" 
+                src="/miller_logos/Miller Design Logo.svg" 
                 alt="Miller Design Logo" 
                 width={120} 
                 height={40} 
@@ -58,7 +58,7 @@ const Header = () => {
           <Link href="/" className="flex items-center">
             {isScrolled || isMenuOpen ? (
               <Image 
-                src="/miller_logos/Miller_Icon_transparent.webp" 
+                src="/miller_logos/Miller_Icon_transparent.svg" 
                 alt="Miller Icon" 
                 width={40} 
                 height={40} 
