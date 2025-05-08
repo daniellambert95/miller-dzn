@@ -259,7 +259,7 @@ const ArtworkSection = () => {
           </div>
           
           {/* Auto-scrolling carousel for all screen sizes */}
-          <div className="relative mx-12 md:ml-16 overflow-hidden">
+          <div className="relative mx-4 sm:mx-6 md:ml-16 overflow-hidden">
             <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaRef}>
               <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
                 {storyImages.map((image, index) => (
