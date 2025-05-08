@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/miller_logos/MDZN wallpaper Blue.png',
         width: 1200,
         height: 630,
         alt: 'Miller Design - Dubai Graphic Design Agency',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Miller Design | Leading Graphic Design Agency Dubai',
     description: 'Professional graphic design agency in Dubai with over 15 years of experience.',
-    images: ['/og-image.jpg'],
+    images: ['/miller_logos/MDZN wallpaper Blue.png'],
   },
   robots: {
     index: true,
