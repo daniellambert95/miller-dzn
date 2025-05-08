@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 const ArtworkSection = () => {
   // Define images from Story folder (event posters)
@@ -38,6 +40,66 @@ const ArtworkSection = () => {
       src: "/Graphics/Story/Festive Brunch Flyer No Snow.webp",
       alt: "Festive Brunch Flyer Design - Creative Event Marketing Dubai"
     },
+    {
+      src: "/Graphics/Story/Zoo Project Glitch Teaser.webp",
+      alt: "Zoo Project Glitch Event Teaser - Innovative Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/BI  BEACH STORY.webp",
+      alt: "BI Beach Event Story - Creative Beach Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/BMT Imagination 2.webp",
+      alt: "BMT Imagination Event Poster - Creative Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Clap IBZ Friends and Family Invite 2025.webp",
+      alt: "Clap IBZ Friends and Family Event 2025 - Exclusive Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/F1 Monaco Invite FLYER.webp",
+      alt: "F1 Monaco Event Invite - Premium Racing Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Fionn Queens Poster2345.webp",
+      alt: "Fionn Queens Event Poster - Professional Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/KIMMIC NYE 5th Av.webp",
+      alt: "KIMMIC New Year's Eve 5th Avenue Event - Premium NYE Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Lovely Laura Poster.webp",
+      alt: "Lovely Laura Event Poster - Creative Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Mas Visa Poster.webp",
+      alt: "Mas Visa Event Poster - Professional Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Motorino Late Weekend Brunch.webp",
+      alt: "Motorino Weekend Brunch Event - Creative Brunch Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/NYE 4.webp",
+      alt: "New Year's Eve Event Design - Premium NYE Celebration Dubai"
+    },
+    {
+      src: "/Graphics/Story/Occult Poster - JON10.webp",
+      alt: "Occult Event Poster by JON10 - Creative Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Shonen Sunday Poster 12.webp",
+      alt: "Shonen Sunday Event Poster - Professional Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Syon Lounge Poster.webp",
+      alt: "Syon Lounge Event Poster - Premium Lounge Event Design Dubai"
+    },
+    {
+      src: "/Graphics/Story/Ushuaia Demo Poster.webp",
+      alt: "Ushuaia Event Demo Poster - Professional Event Design Dubai"
+    }
   ];
   
   // Define images from Wide folder (branding & mockups)
@@ -94,10 +156,24 @@ const ArtworkSection = () => {
     }
   ];
   
-  // Group story images for hero section
-  const leftGroup = storyImages.slice(0, 2);
-  const center = storyImages[2];
-  const rightGroup = storyImages.slice(3, 5);
+  // State for the lightbox/modal
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  
+  // Embla carousel for event posters
+  const [emblaRef] = useEmblaCarousel({ 
+    loop: true,
+    align: 'start',
+    skipSnaps: false,
+    containScroll: 'trimSnaps'
+  }, [
+    AutoScroll({ 
+      speed: 0.8,
+      direction: 'forward',
+      stopOnInteraction: false,
+      playOnInit: true
+    })
+  ]);
   
   // Reference for scroll functionality
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -108,6 +184,21 @@ const ArtworkSection = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Handle opening the modal with the clicked image
+  const openModal = (image: { src: string; alt: string }) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+    // Prevent scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Handle closing the modal
+  const closeModal = () => {
+    setModalOpen(false);
+    // Re-enable scrolling when modal is closed
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -150,102 +241,36 @@ const ArtworkSection = () => {
 
         {/* Hero Section - Poster Showcase */}
         <div id="poster-showcase" className="relative mb-32">
-          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-5xl text-gray-200 font-bold hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-gray-200 font-bold z-10 text-3xl md:text-4xl lg:text-5xl hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
             EVENT POSTERS
           </div>
           
-          {/* Main artwork display: Desktop version */}
-          <div className="hidden md:block relative max-w-6xl mx-auto">
-            <div className="flex items-center justify-center">
-              {/* Left Group */}
-              <div className="relative flex w-[380px] h-[480px]">
-                <div className="absolute left-0 top-10 transform -rotate-3 z-20 hover:-translate-y-2 transition-all duration-300">
-                  <div className="relative w-[200px] h-[380px] shadow-md rounded-md overflow-hidden">
-                    <Image
-                      src={leftGroup[0].src}
-                      alt={leftGroup[0].alt}
-                      fill
-                      className="object-cover rounded-md"
-                    />
+          {/* Auto-scrolling carousel for all screen sizes */}
+          <div className="relative mx-12 md:ml-16 overflow-hidden">
+            <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaRef}>
+              <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
+                {storyImages.map((image, index) => (
+                  <div 
+                    key={index} 
+                    className="embla__slide flex-shrink-0 min-w-[160px] md:min-w-[200px] w-[160px] md:w-[200px] h-[290px] md:h-[360px] shadow-md rounded-md overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1"
+                    onClick={() => openModal(image)}
+                  >
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src={image.src} 
+                        alt={image.alt}
+                        fill
+                        priority={index < 5}
+                        style={{ objectFit: 'cover' }}
+                        className="rounded-md"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="absolute left-[170px] bottom-10 transform rotate-1 z-10 hover:-translate-y-2 transition-all duration-300">
-                  <div className="relative w-[200px] h-[380px] shadow-md rounded-md overflow-hidden">
-                    <Image
-                      src={leftGroup[1].src}
-                      alt={leftGroup[1].alt}
-                      fill
-                      className="object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Center Image */}
-              <div className="relative z-30 hover:-translate-y-2 transition-all duration-300 mx-4">
-                <div className="relative w-[220px] h-[430px] shadow-lg rounded-md overflow-hidden">
-                  <Image
-                    src={center.src}
-                    alt={center.alt}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                </div>
-              </div>
-              
-              {/* Right Group */}
-              <div className="relative flex w-[380px] h-[480px]">
-                <div className="absolute right-[170px] bottom-10 transform -rotate-1 z-10 hover:-translate-y-2 transition-all duration-300">
-                  <div className="relative w-[200px] h-[380px] shadow-md rounded-md overflow-hidden">
-                    <Image
-                      src={rightGroup[0].src}
-                      alt={rightGroup[0].alt}
-                      fill
-                      className="object-cover rounded-md"
-                    />
-                  </div>
-                </div>
-                <div className="absolute right-0 top-10 transform rotate-3 z-20 hover:-translate-y-2 transition-all duration-300">
-                  <div className="relative w-[200px] h-[380px] shadow-md rounded-md overflow-hidden">
-                    <Image
-                      src={rightGroup[1].src}
-                      alt={rightGroup[1].alt}
-                      fill
-                      className="object-cover rounded-md"
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-          </div>
-
-          {/* Main artwork display: Mobile version (horizontal scroll) */}
-          <div className="md:hidden relative mb-8 overflow-hidden">
-            <div 
-              ref={scrollContainerRef}
-              className="flex gap-4 overflow-x-auto pb-6 px-2 custom-scrollbar snap-x snap-mandatory"
-              style={{ 
-                scrollBehavior: 'smooth', 
-                scrollbarWidth: 'none'
-              }}
-            >
-              {storyImages.slice(0, 5).map((image, index) => (
-                <div 
-                  key={index} 
-                  className="flex-shrink-0 w-[160px] h-[290px] shadow-md rounded-md overflow-hidden snap-center"
-                >
-                  <div className="relative w-full h-full">
-                    <Image 
-                      src={image.src} 
-                      alt={image.alt}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-md"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+            {/* Gradient fades for the carousel edges */}
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </div>
 
@@ -265,7 +290,8 @@ const ArtworkSection = () => {
             {wideImages.slice(0, 3).map((image, index) => (
               <div 
                 key={index}
-                className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white"
+                className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white cursor-pointer transform hover:scale-[1.02]"
+                onClick={() => openModal(image)}
               >
                 <div className="relative h-[280px] w-full">
                   <Image
@@ -289,7 +315,8 @@ const ArtworkSection = () => {
                 {wideImages.slice(3).map((image, index) => (
                   <div 
                     key={index}
-                    className="flex-shrink-0 group relative w-[280px] h-[220px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white"
+                    className="flex-shrink-0 group relative w-[280px] h-[220px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white cursor-pointer transform hover:scale-[1.02]"
+                    onClick={() => openModal(image)}
                   >
                     <div className="relative h-[180px] w-full">
                       <Image
@@ -313,22 +340,58 @@ const ArtworkSection = () => {
         </div>
 
         {/* Complete Portfolio Button */}
-        <div className="flex justify-center mb-24">
+        <div className="flex justify-center mb-12 md:mb-24 mt-8 md:mt-12">
           <a
             href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-xl font-semibold rounded-xl py-6 px-4 transition-colors duration-200 shadow-md"
+            className="w-3/4 md:w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-lg md:text-xl font-semibold rounded-xl py-4 md:py-6 px-3 md:px-4 transition-colors duration-200 shadow-md"
           >
             Complete Portfolio
           </a>
         </div>
       </div>
 
+      {/* Image Lightbox/Modal */}
+      {modalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
+          <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-full h-full">
+              <Image 
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                style={{ objectFit: 'contain' }}
+                className="rounded-md"
+              />
+            </div>
+            <button 
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Custom scrollbar style */}
       <style jsx global>{`
         .custom-scrollbar::-webkit-scrollbar {
           display: none;
+        }
+        
+        .embla {
+          overflow: hidden;
+        }
+        .embla__container {
+          display: flex;
+        }
+        .embla__slide {
+          flex: 0 0 auto;
+          min-width: 0;
         }
       `}</style>
     </section>
