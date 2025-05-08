@@ -175,9 +175,6 @@ const ArtworkSection = () => {
     })
   ]);
   
-  // Reference for scroll functionality
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
   // Scroll to section function
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
