@@ -71,7 +71,7 @@ const PromoPopup = () => {
                 Contact us to collect your creative!
               </p>
               <Link
-                href="#contact"
+                href="#contact-form"
                 onClick={handleClose}
                 className="group relative px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
               >

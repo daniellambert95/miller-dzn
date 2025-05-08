@@ -122,7 +122,7 @@ const ContactSection = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-xl p-8">
+          <div id="contact-form" className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
             
             {submitStatus.type && (
