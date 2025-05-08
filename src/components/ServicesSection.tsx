@@ -150,7 +150,7 @@ const ServicesSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/Business Card Mockup_2aa.png" 
+                src="/miller_design_work/Business Card Mockup_2aa.webp" 
                 alt="KIRA Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -165,7 +165,7 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/TOTEBAG MOCKUP FILE.png" 
+                src="/miller_design_work/TOTEBAG MOCKUP FILE.webp" 
                 alt="MDZN Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -180,7 +180,7 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/Macbook on Wooden Slats.png" 
+                src="/miller_design_work/Macbook on Wooden Slats.webp" 
                 alt="Business Card Design" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -195,7 +195,7 @@ const ServicesSection = () => {
             
             <div className="relative h-80 group overflow-hidden rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-500">
               <Image 
-                src="/miller_design_work/KIRA MOCKUP V2.png" 
+                src="/miller_design_work/KIRA MOCKUP V2.webp" 
                 alt="Club Invitation" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"

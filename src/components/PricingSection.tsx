@@ -225,7 +225,7 @@ const PricingSection = () => {
             <div className="relative overflow-hidden rounded-3xl shadow-xl group hover:shadow-[0_30px_60px_-15px_rgba(4,185,214,0.25)] transition-all duration-300">
               <div className="relative h-72 w-full">
                 <Image 
-                  src="/miller_design_work/Mockup.png" 
+                  src="/miller_design_work/Mockup.webp" 
                   alt="Featured Design Work" 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

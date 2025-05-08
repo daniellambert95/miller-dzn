@@ -5,19 +5,19 @@ import Image from 'next/image';
 
 // Use all 8 logos
 const clientLogos = [
-  { name: "Client 1", path: "/client_logos/Bourjois.png" },
-  { name: "Client 2", path: "/client_logos/Cadillac.png" },
-  { name: "Client 3", path: "/client_logos/CLAP.png" },
-  { name: "Client 4", path: "/client_logos/IHG.png" },
-  { name: "Client 5", path: "/client_logos/IRis.png" },
-  { name: "Client 6", path: "/client_logos/JA.png" },
-  { name: "Client 7", path: "/client_logos/JJBL.png" },
-  { name: "Client 8", path: "/client_logos/Schwepps.png" },
-  { name: "Client 8", path: "/client_logos/Sony.png" },
-  { name: "Client 8", path: "/client_logos/Surf Club.png" },
-  { name: "Client 8", path: "/client_logos/Tiktok.png" },
-  { name: "Client 8", path: "/client_logos/Ushuaia.png" },
-  { name: "Client 8", path: "/client_logos/White.png" },
+  { name: "Client 1", path: "/client_logos/Bourjois.webp" },
+  { name: "Client 2", path: "/client_logos/Cadillac.webp" },
+  { name: "Client 3", path: "/client_logos/CLAP.webp" },
+  { name: "Client 4", path: "/client_logos/IHG.webp" },
+  { name: "Client 5", path: "/client_logos/IRis.webp" },
+  { name: "Client 6", path: "/client_logos/JA.webp" },
+  { name: "Client 7", path: "/client_logos/JJBL.webp" },
+  { name: "Client 8", path: "/client_logos/Schwepps.webp" },
+  { name: "Client 8", path: "/client_logos/Sony.webp" },
+  { name: "Client 8", path: "/client_logos/Surf Club.webp" },
+  { name: "Client 8", path: "/client_logos/Tiktok.webp" },
+  { name: "Client 8", path: "/client_logos/Ushuaia.webp" },
+  { name: "Client 8", path: "/client_logos/White.webp" },
 ];
 
 const LogoBanner = () => {

@@ -39,7 +39,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/background/Background Top.png"
+          src="/background/Background Top.webp"
           alt="Miller Design Dubai - Professional Graphic Design Agency Background"
           fill
           className="object-cover"
@@ -72,7 +72,7 @@ const HeroSection = () => {
           {/* Logo Mark - Centered */}
           <div className="w-24 h-24 md:w-32 md:h-32 relative mb-4">
             <Image 
-              src="/miller_logos/miller white.png" 
+              src="/miller_logos/miller white.webp" 
               alt="Miller Design Dubai Logo - Professional Graphic Design Agency" 
               fill
               className="object-contain"

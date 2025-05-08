@@ -7,35 +7,35 @@ const ArtworkSection = () => {
   // Define images from Story folder (event posters)
   const storyImages = [
     {
-      src: "/Graphics/Story/VBLK2.png",
+      src: "/Graphics/Story/VBLK2.webp",
       alt: "BLK Arena Event Poster - Professional Graphic Design by Miller Design Dubai"
     },
     {
-      src: "/Graphics/Story/TAGO MAGO DEMO.png",
+      src: "/Graphics/Story/TAGO MAGO DEMO.webp",
       alt: "TAGO MAGO Dubai Event Poster - Creative Design Agency Dubai"
     },
     {
-      src: "/Graphics/Story/Occult Poster - Chontane.png",
+      src: "/Graphics/Story/Occult Poster - Chontane.webp",
       alt: "Occult Poster for Chontane - Premium Event Design Dubai"
     },
     {
-      src: "/Graphics/Story/Nebula Julian Jordan.png",
+      src: "/Graphics/Story/Nebula Julian Jordan.webp",
       alt: "Nebula Julian Jordan Event Poster - Professional Event Design Dubai"
     },
     {
-      src: "/Graphics/Story/Endor Poster.png",
+      src: "/Graphics/Story/Endor Poster.webp",
       alt: "Endor Event Poster - Creative Design Solutions Dubai"
     },
     {
-      src: "/Graphics/Story/Belters Only Poster.png",
+      src: "/Graphics/Story/Belters Only Poster.webp",
       alt: "Belters Only Event Poster - Professional Graphic Design Dubai"
     },
     {
-      src: "/Graphics/Story/NYE LDN 2024 OFFICIAL FLYER v2.png",
+      src: "/Graphics/Story/NYE LDN 2024 OFFICIAL FLYER v2.webp",
       alt: "New Year's Eve London 2024 Official Flyer - Premium Event Design"
     },
     {
-      src: "/Graphics/Story/Festive Brunch Flyer No Snow.png",
+      src: "/Graphics/Story/Festive Brunch Flyer No Snow.webp",
       alt: "Festive Brunch Flyer Design - Creative Event Marketing Dubai"
     },
   ];
@@ -43,52 +43,52 @@ const ArtworkSection = () => {
   // Define images from Wide folder (branding & mockups)
   const wideImages = [
     {
-      src: "/Graphics/Wide/Urban Wall Poster Mockup.png",
+      src: "/Graphics/Wide/Urban Wall Poster Mockup.webp",
       alt: "Urban Wall Poster Mockup - Professional Branding Design Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/TUMBLER MOCKUP FILE 3.png",
+      src: "/Graphics/Wide/TUMBLER MOCKUP FILE 3.webp",
       alt: "Custom Branded Tumbler Design - Brand Merchandise Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/TOTEBAG MOCKUP FILE.png",
+      src: "/Graphics/Wide/TOTEBAG MOCKUP FILE.webp",
       alt: "Custom Branded Tote Bag Design - Brand Merchandise Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/Mockup.png",
+      src: "/Graphics/Wide/Mockup.webp",
       alt: "Professional Brand Mockup - Creative Design Agency Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/Macbook on Wooden Slats.png",
+      src: "/Graphics/Wide/Macbook on Wooden Slats.webp",
       alt: "Macbook Brand Presentation - Digital Design Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/LIGHT BOX SIGN MOCKUP FILE.png",
+      src: "/Graphics/Wide/LIGHT BOX SIGN MOCKUP FILE.webp",
       alt: "Light Box Sign Design - Professional Branding Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/KIRA MOCKUP V2.png",
+      src: "/Graphics/Wide/KIRA MOCKUP V2.webp",
       alt: "KIRA Branded Bags Collection - Premium Branding Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/KIRA Apron.png",
+      src: "/Graphics/Wide/KIRA Apron.webp",
       alt: "KIRA Branded Apron Design - Professional Brand Merchandise Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/DJ Tennis.png",
+      src: "/Graphics/Wide/DJ Tennis.webp",
       alt: "DJ Tennis Brand Design - Creative Branding Dubai",
       category: "branding"
     },
     {
-      src: "/Graphics/Wide/Business Card Mockup_2aa.png",
+      src: "/Graphics/Wide/Business Card Mockup_2aa.webp",
       alt: "Professional Business Card Design - Corporate Branding Dubai",
       category: "branding"
     }

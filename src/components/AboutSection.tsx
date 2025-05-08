@@ -24,7 +24,7 @@ const AboutSection = () => {
               />
               <div className="h-full w-full rounded-xl bg-white/80 backdrop-blur-md flex items-center justify-center">
                 <Image 
-                  src="/miller_design_work/0S5A1356-Photoroom.png" 
+                  src="/miller_design_work/0S5A1356-Photoroom.webp" 
                   alt="Geoff Miller, CEO of Miller Design" 
                   fill
                   className="object-contain transition-transform duration-500 hover:scale-105"

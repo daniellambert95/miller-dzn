@@ -62,7 +62,7 @@ const ProcessSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/background/Background Top.png"
+          src="/background/Background Top.webp"
           alt="Process Background"
           fill
           className="object-cover"
