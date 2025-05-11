@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://millerdesign.ai'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://millerdesign.ai',
   },
   openGraph: {
     title: "Miller Design | Leading Graphic Design Agency Dubai",
