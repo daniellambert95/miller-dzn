@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
+import bunnyVideoLoader from '@/utils/videoLoader';
 
 interface Video {
   title: string;
@@ -13,38 +14,38 @@ interface Video {
 const videos: Video[] = [
   {
     title: "Forged Irish Stout",
-    src: "/videos/Forged Irish Stout Commercial - MDZN.mp4",
-    thumbnail: "/videos/Forged Irish Stout Commercial - MDZN.mp4",
+    src: "Forged Irish Stout Commercial - MDZN.mp4",
+    thumbnail: "Forged Irish Stout Commercial - MDZN.mp4",
     featured: true
   },
   {
     title: "Ushuaia Dubai Trailer",
-    src: "/videos/Michael Bibi Ushuaia Dubai Trailer.mp4",
-    thumbnail: "/videos/Michael Bibi Ushuaia Dubai Trailer.mp4",
+    src: "Michael Bibi Ushuaia Dubai Trailer.mp4",
+    thumbnail: "Michael Bibi Ushuaia Dubai Trailer.mp4",
     featured: false
   },
   {
     title: "Clap Ibiza Trailer",
-    src: "/videos/CLAP IBZ NOW OPEN TEASER.mp4",
-    thumbnail: "/videos/CLAP IBZ NOW OPEN TEASER.mp4",
+    src: "CLAP IBZ NOW OPEN TEASER.mp4",
+    thumbnail: "CLAP IBZ NOW OPEN TEASER.mp4",
     featured: false
   },
   {
     title: "London Teaser",
-    src: "/videos/London Teaser 2.mp4",
-    thumbnail: "/videos/London Teaser 2.mp4",
+    src: "London Teaser 2.mp4",
+    thumbnail: "London Teaser 2.mp4",
     featured: false
   },
   {
     title: "Summer sessions",
-    src: "/videos/LS 3D Teaser.mp4",
-    thumbnail: "/videos/LS 3D Teaser.mp4",
+    src: "LS 3D Teaser.mp4",
+    thumbnail: "LS 3D Teaser.mp4",
     featured: false
   },
   {
     title: "MDZN Amphitheatre",
-    src: "/videos/MDZN AMPHITHEATRE_1.mp4",
-    thumbnail: "/videos/MDZN AMPHITHEATRE_1.mp4",
+    src: "MDZN AMPHITHEATRE_1.mp4",
+    thumbnail: "MDZN AMPHITHEATRE_1.mp4",
     featured: false
   }
 ];
@@ -58,7 +59,7 @@ const VideoCard = ({ video, onClick, selected }: { video: Video; onClick: (video
       {/* Small video preview */}
       <video
         className="w-16 h-16 object-cover rounded-md border border-white bg-black"
-        src={video.src}
+        src={bunnyVideoLoader(video.src)}
         muted
         loop
         playsInline
@@ -93,7 +94,7 @@ const VideosSection = () => {
           <div ref={phoneRef} className="flex-1 flex flex-col items-center w-full lg:w-auto mb-8 lg:mb-0">
             <Iphone15Pro
               className="size-full max-w-[270px] max-h-[560px] mx-auto"
-              videoSrc={selectedVideo.src}
+              videoSrc={bunnyVideoLoader(selectedVideo.src)}
             />
             <h3 className="text-2xl font-bold mt-4 text-center">{selectedVideo.title}</h3>
           </div>

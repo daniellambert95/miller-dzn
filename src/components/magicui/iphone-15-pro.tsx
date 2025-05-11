@@ -75,8 +75,8 @@ export default function Iphone15Pro({
             src={videoSrc}
             autoPlay
             loop
-            muted
             playsInline
+            controls
           />
         </foreignObject>
       )}
