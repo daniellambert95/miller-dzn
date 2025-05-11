@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Miller Design | Leading Graphic Design Agency Dubai",
-    description: "Professional graphic design agency in Dubai with over 15 years of experience. Specializing in branding, web design, and creative solutions.",
+    description: "Expert graphic design studio in Dubai with 15+ years of experience in branding, web design, and creative visual solutions.",
     url: 'https://millerdesign.ai',
     siteName: 'Miller Design',
     locale: 'en_AE',
