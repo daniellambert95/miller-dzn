@@ -8,7 +8,7 @@ import ProcessSection from "@/components/ProcessSection";
 import GalleryPreview from "@/components/GalleryPreview";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import ClientPromoPopup from "@/components/ClientPromoPopup";
+// import ClientPromoPopup from "@/components/ClientPromoPopup";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <ServicesSection />
       <ContactSection />
       <Footer />
-      <ClientPromoPopup />
+      {/* <ClientPromoPopup /> */}
     </main>
   );
 }
