@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
   const formRef = React.useRef<HTMLFormElement>(null);
+  const pathname = usePathname();
+  const isContactPage = pathname === '/contact';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -54,8 +57,13 @@ const ContactSection = () => {
     }
   };
 
+  // Add extra padding at the top when used as a standalone page
+  const sectionClass = isContactPage 
+    ? "section bg-white pt-32" 
+    : "section bg-white";
+
   return (
-    <section id="contact" className="section bg-white">
+    <section id={!isContactPage ? "contact" : undefined} className={sectionClass}>
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-block bg-primary/10 px-4 py-2 rounded-full">

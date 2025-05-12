@@ -2,11 +2,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import bunnyImageLoader from '@/utils/imageLoader';
 
 const ArtworkSection = () => {
+  const pathname = usePathname();
+  const isGalleryPage = pathname === '/gallery';
+  
   // Define images from Story folder (event posters)
   const storyImages = [
     {
@@ -215,7 +219,7 @@ const ArtworkSection = () => {
   };
 
   return (
-    <section className="pt-16 bg-white relative overflow-hidden">
+    <section className={`${isGalleryPage ? 'pt-32' : 'pt-16'} bg-white relative overflow-hidden`}>
       {/* Background decorative elements */}
       <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-gradient-to-br from-pink-200 to-pink-50 opacity-30 blur-3xl -z-10"></div>
       <div className="absolute bottom-40 right-0 w-80 h-80 rounded-full bg-gradient-to-tr from-purple-200 to-purple-50 opacity-30 blur-3xl -z-10"></div>

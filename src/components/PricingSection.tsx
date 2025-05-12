@@ -102,7 +102,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="section py-24 bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden">
+    <section className="section py-32 bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
         <div className="absolute -right-24 -top-24 w-96 h-96 bg-[#04b9d6]/10 rounded-full blur-3xl"></div>
@@ -167,7 +167,7 @@ const PricingSection = () => {
                   
                   <div>
                     <a 
-                      href="#contact" 
+                      href="/contact" 
                       className="block w-full bg-white text-[#04b9d6] hover:bg-white/90 transition-all duration-300 text-center font-medium py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1" 
                       style={{ color: '#04b9d6' }}
                     >
@@ -239,7 +239,7 @@ const PricingSection = () => {
                     <h3 className="text-white text-3xl font-bold mb-5">Ready to Transform Your Brand?</h3>
                     <p className="text-white/90 text-lg mb-8">Join the MDZN family and elevate your visual identity to new heights.</p>
                     <a 
-                      href="#contact" 
+                      href="/contact" 
                       className="inline-flex items-center bg-white text-[#04b9d6] hover:bg-white/90 transition-all duration-300 px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
                       Contact Us

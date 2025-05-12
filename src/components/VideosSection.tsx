@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import bunnyVideoLoader from '@/utils/videoLoader';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 interface Video {
   title: string;
@@ -15,37 +16,37 @@ const videos: Video[] = [
   {
     title: "Forged Irish Stout",
     src: "Forged Irish Stout Commercial - MDZN.mp4",
-    thumbnail: "Forged Irish Stout Commercial - MDZN.mp4",
+    thumbnail: "irish_stout_thumbnail.webp",
     featured: true
   },
   {
     title: "Ushuaia Dubai Trailer",
     src: "Michael Bibi Ushuaia Dubai Trailer.mp4",
-    thumbnail: "Michael Bibi Ushuaia Dubai Trailer.mp4",
+    thumbnail: "ushuaia_thumbnail.webp",
     featured: false
   },
   {
     title: "Clap Ibiza Trailer",
     src: "CLAP IBZ NOW OPEN TEASER.mp4",
-    thumbnail: "CLAP IBZ NOW OPEN TEASER.mp4",
+    thumbnail: "clap_ibiza_thumbnail.webp",
     featured: false
   },
   {
     title: "London Teaser",
     src: "London Teaser 2.mp4",
-    thumbnail: "London Teaser 2.mp4",
+    thumbnail: "clap_london_thumbnail.webp", 
     featured: false
   },
   {
     title: "Summer sessions",
     src: "LS 3D Teaser.mp4",
-    thumbnail: "LS 3D Teaser.mp4",
+    thumbnail: "summer_sessions_thumbnail.webp",
     featured: false
   },
   {
     title: "MDZN Amphitheatre",
     src: "MDZN AMPHITHEATRE_1.mp4",
-    thumbnail: "MDZN AMPHITHEATRE_1.mp4",
+    thumbnail: "ampitheatre_thumbnail.webp",
     featured: false
   }
 ];
@@ -56,15 +57,18 @@ const VideoCard = ({ video, onClick, selected }: { video: Video; onClick: (video
       className={`relative group cursor-pointer overflow-hidden rounded-lg shadow-lg transition-all duration-300 flex items-center gap-4 p-3 mb-3 bg-[#04b9d6] min-h-20 border-2 ${selected ? 'border-black shadow-xl scale-105' : 'border-transparent'}`}
       onClick={() => onClick(video)}
     >
-      {/* Small video preview */}
-      <video
-        className="w-16 h-16 object-cover rounded-md border border-white bg-black"
-        src={bunnyVideoLoader(video.src)}
-        muted
-        loop
-        playsInline
-        autoPlay
-      />
+      {/* Thumbnail image instead of auto-playing video */}
+      <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md border border-white">
+        <img 
+          src={bunnyImageLoader({ 
+            src: `/images/${video.thumbnail}`, 
+            width: 128, 
+            quality: 40 
+          })} 
+          alt={`${video.title} thumbnail`}
+          className="w-full h-full object-cover"
+        />
+      </div>
       <div className="flex flex-col justify-center">
         <h3 className="text-lg font-bold text-white mb-1">{video.title}</h3>
         <p className="text-xs text-blue-100">Click to view</p>
@@ -115,7 +119,7 @@ const VideosSection = () => {
       {/* CTA Button */}
       <div className="flex my-6 justify-center">
         <a 
-          href="#contact" 
+          href="/contact" 
           className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
           aria-label="Get a free quote for your design project"
         >

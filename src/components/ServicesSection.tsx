@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import bunnyImageLoader from '@/utils/imageLoader';
-
+import Link from 'next/link';
 const ServicesSection = () => {
   const [, setHoveredIndex] = useState<number | null>(null);
 
@@ -210,8 +210,51 @@ const ServicesSection = () => {
               </div>
             </div>
           </div>
-          
-          
+
+          {/* CTA */}
+        <div className="flex justify-center mt-24">
+          <Link 
+            href="/gallery" 
+            className="inline-flex items-center bg-[#04b9d6] hover:bg-sky-500 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+          >
+            Explore Full Gallery
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+        
+        {/* Additional CTA Section */}
+        <div className="mt-20">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group hover:shadow-[0_30px_60px_-15px_rgba(4,185,214,0.25)] transition-all duration-300">
+            <div className="relative h-72 w-full">
+              <Image 
+                src="/miller_design_work/Mockup.webp" 
+                alt="Featured Design Work" 
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                loader={bunnyImageLoader}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+              
+              <div className="absolute inset-0 flex items-center px-10 md:px-16">
+                <div className="max-w-xl">
+                  <h3 className="text-white text-3xl font-bold mb-5">Ready to Transform Your Brand?</h3>
+                  <p className="text-white/90 text-lg mb-8">Join the MDZN family and elevate your visual identity to new heights.</p>
+                  <a 
+                    href="/contact" 
+                    className="inline-flex items-center bg-white text-[#04b9d6] hover:bg-white/90 transition-all duration-300 px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    Contact Us
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
