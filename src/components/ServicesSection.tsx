@@ -4,16 +4,17 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import bunnyImageLoader from '@/utils/imageLoader';
 import Link from 'next/link';
+
 const ServicesSection = () => {
   const [, setHoveredIndex] = useState<number | null>(null);
 
   const coreValues = [
     {
-      title: 'Quality',
-      description: 'Exceptional craftsmanship and attention to detail in every design we create.',
+      title: 'Branding',
+      description: 'Crafting bold, memorable brand identities that leave a lasting impression.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       ),
       color: '#04b9d6',
@@ -23,11 +24,11 @@ const ServicesSection = () => {
       bgDark: 'to-cyan-100/30'
     },
     {
-      title: 'Volume',
-      description: 'Capacity to handle multiple projects and deliver high-quality content at scale.',
+      title: 'Graphics',
+      description: 'Designing sharp, scroll-stopping visuals for digital and print impact.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
       color: '#6366f1',
@@ -37,11 +38,11 @@ const ServicesSection = () => {
       bgDark: 'to-indigo-100/30'
     },
     {
-      title: 'Speed',
-      description: 'Fast turnaround with same-day delivery options for time-sensitive projects.',
+      title: 'Reels / Animations',
+      description: 'Creating dynamic motion content that tells your story in seconds.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
         </svg>
       ),
       color: '#ec4899',
@@ -51,11 +52,11 @@ const ServicesSection = () => {
       bgDark: 'to-pink-100/30'
     },
     {
-      title: 'Consistency',
-      description: 'Reliable, high-quality output that maintains your brand identity across all designs.',
+      title: '3D / CGI',
+      description: 'Bringing ideas to life with high-end 3D visuals and hyperreal CGI.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
         </svg>
       ),
       color: '#84cc16',
@@ -65,11 +66,11 @@ const ServicesSection = () => {
       bgDark: 'to-lime-100/30'
     },
     {
-      title: 'Cost Effectiveness',
-      description: 'Premium design services at competitive rates that maximize your ROI.',
+      title: 'Social Media',
+      description: 'Producing content that connects, engages, and drives your audience to act.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
         </svg>
       ),
       color: '#f59e0b',
@@ -106,7 +107,7 @@ const ServicesSection = () => {
           {coreValues.map((value, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group"
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group text-left"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -212,49 +213,49 @@ const ServicesSection = () => {
           </div>
 
           {/* CTA */}
-        <div className="flex justify-center mt-24">
-          <Link 
-            href="/gallery" 
-            className="inline-flex items-center bg-[#04b9d6] hover:bg-sky-500 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-          >
-            Explore Full Gallery
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
-        </div>
-        
-        {/* Additional CTA Section */}
-        <div className="mt-20">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl group hover:shadow-[0_30px_60px_-15px_rgba(4,185,214,0.25)] transition-all duration-300">
-            <div className="relative h-72 w-full">
-              <Image 
-                src="/miller_design_work/Mockup.webp" 
-                alt="Featured Design Work" 
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                loader={bunnyImageLoader}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
-              
-              <div className="absolute inset-0 flex items-center px-10 md:px-16">
-                <div className="max-w-xl">
-                  <h3 className="text-white text-3xl font-bold mb-5">Ready to Transform Your Brand?</h3>
-                  <p className="text-white/90 text-lg mb-8">Join the MDZN family and elevate your visual identity to new heights.</p>
-                  <a 
-                    href="/contact" 
-                    className="inline-flex items-center bg-white text-[#04b9d6] hover:bg-white/90 transition-all duration-300 px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  >
-                    Contact Us
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+          <div className="flex justify-center mt-24">
+            <Link 
+              href="/gallery" 
+              className="inline-flex items-center bg-[#04b9d6] hover:bg-sky-500 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+            >
+              Explore Full Gallery
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+          
+          {/* Additional CTA Section */}
+          <div className="mt-20">
+            <div className="relative overflow-hidden rounded-3xl shadow-xl group hover:shadow-[0_30px_60px_-15px_rgba(4,185,214,0.25)] transition-all duration-300">
+              <div className="relative h-72 w-full">
+                <Image 
+                  src="/miller_design_work/Mockup.webp" 
+                  alt="Featured Design Work" 
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  loader={bunnyImageLoader}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+                
+                <div className="absolute inset-0 flex items-center px-10 md:px-16">
+                  <div className="max-w-xl">
+                    <h3 className="text-white text-3xl font-bold mb-5">Ready to Transform Your Brand?</h3>
+                    <p className="text-white/90 text-lg mb-8">Join the MDZN family and elevate your visual identity to new heights.</p>
+                    <a 
+                      href="/contact" 
+                      className="inline-flex items-center bg-white text-[#04b9d6] hover:bg-white/90 transition-all duration-300 px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      Contact Us
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>

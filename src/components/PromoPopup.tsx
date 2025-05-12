@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 const PromoPopup = () => {
@@ -10,10 +9,12 @@ const PromoPopup = () => {
 
   useEffect(() => {
     setIsMounted(true);
+    
+    // Show popup after delay on every visit
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 10000); // 10 seconds delay
-
+    
     return () => clearTimeout(timer);
   }, []);
 
@@ -26,19 +27,19 @@ const PromoPopup = () => {
   }
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 transition-opacity duration-300"
+          style={{
+            opacity: isVisible ? 1 : 0,
+          }}
         >
-          <motion.div
-            className="relative bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            exit={{ y: 50 }}
+          <div
+            className="relative bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transition-transform duration-300"
+            style={{
+              transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.8)',
+            }}
           >
             <button
               onClick={handleClose}
@@ -85,10 +86,10 @@ const PromoPopup = () => {
                 </span>
               </Link>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 
