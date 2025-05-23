@@ -3,10 +3,10 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Miller Design",
-    alternateName: "MDZN",
+    "alternateName": ["MDZN", "Geoff Miller Design"],
     url: "https://millerdesign.ai",
     logo: "https://millerdesign.ai/miller_logos/miller white.png",
-    description: "Professional graphic design agency in Dubai with over 15 years of experience. Specializing in branding, web design, and creative solutions for businesses in Dubai and worldwide.",
+    description: "Miller Design by Geoff Miller -Professional graphic design agency in Dubai with over 15 years of experience. Specializing in branding, web design, and creative solutions for businesses in Dubai and worldwide.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Dubai",

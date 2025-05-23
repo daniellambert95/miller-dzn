@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://millerdesign.ai',
   },
+  verification: {
+    google: 'your-google-site-verification-code',
+    other: {
+      'msvalidate.01': 'your-bing-verification-code',
+    },
+  },
   openGraph: {
     title: "Miller Design | Leading Graphic Design Agency Dubai",
     description: "Expert graphic design studio in Dubai with 15+ years of experience in branding, web design, and creative visual solutions.",
