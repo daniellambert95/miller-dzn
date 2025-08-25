@@ -122,26 +122,26 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Menu (mobile and desktop) */}
+      {/* Menu (mobile and desktop) - Full Screen Overlay */}
       {isMenuOpen && (
-        <div className="bg-white">
-          <div className="container-custom py-4 flex flex-col space-y-4">
-            <Link href="#about" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+        <div className="fixed top-20 left-0 right-0 bottom-0 w-full bg-white z-40">
+          <div className="w-full h-full flex flex-col items-center justify-center space-y-8">
+            <Link href="#about" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
-            <Link href="#services" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#services" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Services
             </Link>
-            <Link href="#process" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#process" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Process
             </Link>
-            <Link href="/gallery" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/gallery" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Gallery
             </Link>
-            <Link href="/pricing" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/pricing" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Pricing
             </Link>
-            <Link href="/contact" className="text-secondary hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" className="text-secondary hover:text-primary transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
           </div>
