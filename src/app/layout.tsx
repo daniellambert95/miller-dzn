@@ -28,9 +28,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-site-verification-code',
-    other: {
-      'msvalidate.01': 'your-bing-verification-code',
-    },
   },
   openGraph: {
     title: "Miller Design | Leading Graphic Design Agency Dubai",
@@ -92,7 +89,7 @@ export default function RootLayout({
         </Script>
         <StructuredData />
       </head>
-      <body className="antialiased bg-white text-secondary">
+      <body className="antialiased bg-white text-secondary" suppressHydrationWarning>
         {children}
       </body>
     </html>

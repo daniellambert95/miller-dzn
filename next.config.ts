@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     loader: 'custom',
     loaderFile: './src/utils/imageLoader.ts',
     // Specify allowed domains for image optimization
-    domains: ['site-and-site-miller-design-images.b-cdn.net'],
+    domains: ['site-and-site-miller-design-images.b-cdn.net', 'millerdzn.b-cdn.net'],
     // Add recommended image formats
     formats: ['image/webp', 'image/avif'],
     // Enable image optimization
@@ -39,9 +39,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  // Add these to your existing metadata
-  keywords: "Miller Design, MDZN Miller Design, Geoff Miller graphic designer, Miller Design UAE branding, Miller Design graphic design agency, Miller Design Dubai, Miller Design UAE, Miller Design graphic design, Miller Design branding, Miller Design logo design, Miller Design web design, Miller Design digital marketing, Miller Design branding agency, Miller Design graphic design agency, Miller Design logo design agency, Miller Design web design agency, Miller Design digital marketing agency, Miller Design branding agency Dubai, Miller Design graphic design agency Dubai, Miller Design logo design agency Dubai, Miller Design web design agency Dubai, Miller Design digital marketing agency Dubai"
 };
 
 export default nextConfig;

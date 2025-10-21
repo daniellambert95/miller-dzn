@@ -90,9 +90,9 @@ const VideosSection = () => {
   };
 
   return (
-    <section id="videos" className="section bg-gray-50 py-20">
+    <section id="videos" className="section bg-black py-20">
       <div className="container-custom">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Videos</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">Videos</h2>
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left: Featured Video */}
           <div ref={phoneRef} className="flex-1 flex flex-col items-center w-full lg:w-auto mb-8 lg:mb-0">
@@ -100,7 +100,7 @@ const VideosSection = () => {
               className="size-full max-w-[270px] max-h-[560px] mx-auto"
               videoSrc={bunnyVideoLoader(selectedVideo.src)}
             />
-            <h3 className="text-2xl font-bold mt-4 text-center">{selectedVideo.title}</h3>
+            <h3 className="text-2xl font-bold mt-4 text-center text-white">{selectedVideo.title}</h3>
           </div>
           {/* Right: Vertical List of Video Cards */}
           <div className="flex-1 w-full max-w-md mx-auto flex flex-col">
@@ -114,18 +114,16 @@ const VideosSection = () => {
             ))}
           </div>
         </div>
-        
+
       </div>
       {/* CTA Button */}
       <div className="flex my-6 justify-center">
-        <a 
-          href="/contact" 
-          className="group relative mt-8 px-10 py-3 font-medium rounded-full text-center inline-flex items-center justify-center overflow-hidden"
+        <a
+          href="/contact"
+          className="group relative mt-8 px-10 py-4 font-bold rounded-full text-center inline-flex items-center justify-center overflow-hidden bg-[#ff6b35] hover:bg-[#ff5722] transition-all duration-300 transform hover:scale-105 shadow-lg"
           aria-label="Get a free quote for your design project"
         >
-          <span className="absolute inset-0 bg-gradient-to-tr from-rose-500 via-red-500 to-rose-600 transition-all duration-300 ease-out group-hover:scale-105"></span>
-          <span className="absolute inset-0 bg-gradient-to-tr from-rose-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-          <span className="relative text-white font-semibold z-10 flex items-center">
+          <span className="relative text-white z-10 flex items-center">
             Free Quote!
             <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -133,7 +131,7 @@ const VideosSection = () => {
           </span>
         </a>
       </div>
-      
+
     </section>
   );
 };

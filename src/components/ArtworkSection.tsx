@@ -219,37 +219,37 @@ const ArtworkSection = () => {
   };
 
   return (
-    <section className={`${isGalleryPage ? 'pt-32' : 'pt-16'} bg-white relative overflow-hidden`}>
+    <section className={`${isGalleryPage ? 'pt-32' : 'pt-16'} bg-black relative overflow-hidden`}>
       {/* Background decorative elements */}
-      <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-gradient-to-br from-pink-200 to-pink-50 opacity-30 blur-3xl -z-10"></div>
-      <div className="absolute bottom-40 right-0 w-80 h-80 rounded-full bg-gradient-to-tr from-purple-200 to-purple-50 opacity-30 blur-3xl -z-10"></div>
-      
+      <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-gradient-to-br from-[#04b9d6]/20 to-[#04b9d6]/5 opacity-30 blur-3xl -z-10"></div>
+      <div className="absolute bottom-40 right-0 w-80 h-80 rounded-full bg-gradient-to-tr from-[#ff6b35]/20 to-[#ff6b35]/5 opacity-30 blur-3xl -z-10"></div>
+
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold tracking-wider uppercase bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold tracking-wider uppercase bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
             ARTWORK
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-white/70">
             The most versatile team of designers around.
           </p>
-          
+
           {/* Quick navigation */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <button 
+            <button
               onClick={() => scrollToSection('poster-showcase')}
-              className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              className="px-5 py-2 text-sm bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-[#04b9d6]/50 transition-colors"
             >
               Event Posters
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('branding-showcase')}
-              className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              className="px-5 py-2 text-sm bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-[#04b9d6]/50 transition-colors"
             >
               Branding
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('videos')}
-              className="px-5 py-2 text-sm bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              className="px-5 py-2 text-sm bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-[#04b9d6]/50 transition-colors"
             >
               Videos
             </button>
@@ -258,23 +258,23 @@ const ArtworkSection = () => {
 
         {/* Hero Section - Poster Showcase */}
         <div id="poster-showcase" className="relative mb-32">
-          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-gray-200 font-bold z-10 text-3xl md:text-4xl lg:text-5xl hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-white/20 font-bold z-10 text-3xl md:text-4xl lg:text-5xl hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
             EVENT POSTERS
           </div>
-          
+
           {/* Auto-scrolling carousel for all screen sizes */}
           <div className="relative mx-4 sm:mx-6 md:ml-16 overflow-hidden">
             <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaRef}>
               <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
                 {storyImages.map((image, index) => (
-                  <div 
-                    key={index} 
-                    className="embla__slide flex-shrink-0 min-w-[160px] md:min-w-[200px] w-[160px] md:w-[200px] h-[290px] md:h-[360px] shadow-md rounded-md overflow-hidden cursor-pointer"
+                  <div
+                    key={index}
+                    className="embla__slide flex-shrink-0 min-w-[160px] md:min-w-[200px] w-[160px] md:w-[200px] h-[290px] md:h-[360px] shadow-lg border border-white/10 rounded-md overflow-hidden cursor-pointer hover:border-[#04b9d6]/50 transition-all"
                     onClick={() => openModal(image)}
                   >
                     <div className="relative w-full h-full">
-                      <Image 
-                        src={image.src} 
+                      <Image
+                        src={image.src}
                         alt={image.alt}
                         fill
                         priority={index < 5}
@@ -288,27 +288,27 @@ const ArtworkSection = () => {
               </div>
             </div>
             {/* Gradient fades for the carousel edges */}
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
           </div>
         </div>
 
         {/* Branding Showcase */}
         <div id="branding-showcase" className="relative mb-32">
-          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-5xl text-gray-200 font-bold hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-5xl text-white/20 font-bold hidden xl:block" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
             BRANDING
           </div>
-          
+
           <div className="mb-12 md:mb-16 max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Brand & Identity Design</h3>
-            <p className="text-gray-600">We create comprehensive brand identities across various media formats.</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">Brand & Identity Design</h3>
+            <p className="text-white/70">We create comprehensive brand identities across various media formats.</p>
           </div>
-          
+
           {/* Featured branding work - Grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {wideImages.slice(0, 3).map((image, index) => (
-              <div 
+              <div
                 key={index}
-                className="group relative rounded-xl overflow-hidden shadow-md bg-white cursor-pointer"
+                className="group relative rounded-xl overflow-hidden shadow-lg border border-white/10 bg-zinc-900 cursor-pointer hover:border-[#04b9d6]/50 transition-all"
                 onClick={() => openModal(image)}
               >
                 <div className="relative h-[280px] w-full">
@@ -332,14 +332,14 @@ const ArtworkSection = () => {
             <div className="embla lg:mx-8 overflow-hidden rounded-md" ref={emblaBrandingRef}>
               <div className="embla__container flex gap-8 py-6 pl-2 pr-12">
                 {wideImages.slice(3).map((image, index) => (
-                  <div 
-                    key={index} 
-                    className="embla__slide flex-shrink-0 min-w-[200px] md:min-w-[250px] w-[200px] md:w-[250px] h-[180px] md:h-[200px] shadow-md rounded-md overflow-hidden cursor-pointer"
+                  <div
+                    key={index}
+                    className="embla__slide flex-shrink-0 min-w-[200px] md:min-w-[250px] w-[200px] md:w-[250px] h-[180px] md:h-[200px] shadow-lg border border-white/10 rounded-md overflow-hidden cursor-pointer hover:border-[#04b9d6]/50 transition-all"
                     onClick={() => openModal(image)}
                   >
                     <div className="relative w-full h-full">
-                      <Image 
-                        src={image.src} 
+                      <Image
+                        src={image.src}
                         alt={image.alt}
                         fill
                         loader={bunnyImageLoader}
@@ -352,7 +352,7 @@ const ArtworkSection = () => {
               </div>
             </div>
             {/* Gradient fades for the carousel edges */}
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
           </div>
         </div>
 
@@ -362,7 +362,7 @@ const ArtworkSection = () => {
             href="https://www.dropbox.com/scl/fo/jzp7awxjmjlan176jyqr1/h?rlkey=tczwuq3e3n5pqhdsdrae0esj9&e=1&st=55vryip7&dl=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-3/4 md:w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-sky-500 text-white text-lg md:text-xl font-semibold rounded-xl py-4 md:py-6 px-3 md:px-4 transition-colors duration-200 shadow-md"
+            className="w-3/4 md:w-1/2 max-w-2xl block text-center bg-[#04b9d6] hover:bg-[#04b9d6]/90 text-white text-lg md:text-xl font-bold rounded-full py-4 md:py-6 px-3 md:px-4 transition-all duration-300 shadow-lg hover:shadow-[#04b9d6]/50 transform hover:scale-105"
           >
             Complete Portfolio
           </a>

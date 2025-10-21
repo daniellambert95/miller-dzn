@@ -38,6 +38,7 @@ export default function Contact() {
       <BreadcrumbStructuredData />
       <Header />
       <Breadcrumbs />
+      <div className="mt-12"></div>
       <ContactSection />
       <Footer />
     </main>
