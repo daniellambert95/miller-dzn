@@ -13,7 +13,7 @@ const AboutSection = () => {
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
             {/* Geoff Photo */}
-            <div className="relative h-[600px] w-full max-w-[400px] mx-auto rounded-2xl overflow-hidden bg-black">
+            <div className="relative h-[450px] w-full max-w-[450px] rounded-2xl overflow-hidden bg-black">
               <Image
                 src="/section2/Box 2.png"
                 alt="Geoff - Creative Director"
@@ -47,7 +47,7 @@ const AboutSection = () => {
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">
-              <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl">
+              <div className="bg-[#0a0a0a] border border-gray-800 p-6 rounded-2xl">
                 <h3 className="text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
                   <NumberTicker
                     value={15}
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 </h3>
                 <p className="text-gray-300 font-medium">Years Experience</p>
               </div>
-              <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl">
+              <div className="bg-[#0a0a0a] border border-gray-800 p-6 rounded-2xl">
                 <h3 className="text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
                   <NumberTicker
                     value={200}
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 </h3>
                 <p className="text-gray-300 font-medium">Global Clients</p>
               </div>
-              <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl">
+              <div className="bg-[#0a0a0a] border border-gray-800 p-6 rounded-2xl">
                 <h3 className="text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>
                   <NumberTicker
                     value={5}
@@ -77,7 +77,7 @@ const AboutSection = () => {
                 </h3>
                 <p className="text-gray-300 font-medium">Projects Completed</p>
               </div>
-              <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl">
+              <div className="bg-[#0a0a0a] border border-gray-800 p-6 rounded-2xl">
                 <h3 className="text-4xl font-bold mb-1" style={{ color: '#04b9d6' }}>24/7</h3>
                 <p className="text-gray-300 font-medium">Support & Service</p>
               </div>

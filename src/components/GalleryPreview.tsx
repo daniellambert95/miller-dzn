@@ -9,25 +9,25 @@ const GalleryPreview = () => {
   // Sample images for the preview
   const previewImages = [
     {
-      src: "/Graphics/Story/VBLK2.webp",
-      alt: "BLK Arena Event Poster - Professional Graphic Design by Miller Design Dubai",
-      type: "poster"
+      src: "/miller_design_work/Empire Van.webp",
+      alt: "Empire Van Branding - Premium Vehicle Wrap Design Dubai",
+      type: "branding"
     },
     {
-      src: "/Graphics/Story/Occult Poster - Chontane.webp",
-      alt: "Occult Poster for Chontane - Premium Event Design Dubai",
-      type: "poster"
+      src: "/miller_design_work/KIRA MOCKUP V2.webp",
+      alt: "KIRA Brand Mockup - Professional Product Design Dubai",
+      type: "mockup"
     },
     {
-      src: "/Graphics/Story/Nebula Julian Jordan.webp",
-      alt: "Nebula Julian Jordan Event Poster - Professional Event Design Dubai",
-      type: "poster"
+      src: "/miller_design_work/Mockup Final.webp",
+      alt: "Final Product Mockup - Creative Design Agency Dubai",
+      type: "mockup"
     },
     {
-      src: "/Graphics/Story/TAGO MAGO DEMO.webp",
-      alt: "TAGO MAGO Dubai Event Poster - Creative Design Agency Dubai",
-      type: "poster"
-    }
+      src: "/miller_design_work/Citronelle Lunch Bowl A0.webp",
+      alt: "Citronelle Lunch Bowl Design - Professional Branding by Miller Design Dubai",
+      type: "branding"
+    },
   ];
 
   return (
@@ -73,7 +73,7 @@ const GalleryPreview = () => {
         <div className="flex justify-center">
           <Link
             href="/gallery"
-            className="inline-flex items-center bg-[#04b9d6] hover:bg-[#04b9d6]/90 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-[#04b9d6]/50 transform hover:scale-105"
+            className="inline-flex items-center bg-[#04b9d6] hover:bg-[#04b9d6]/90 text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#04b9d6]/50 transform hover:scale-105"
           >
             View Our Portfolio
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@ const GalleryPreview = () => {
           <div className="relative overflow-hidden rounded-3xl shadow-xl group hover:shadow-[0_30px_60px_-15px_rgba(4,185,214,0.25)] transition-all duration-300">
             <div className="relative h-72 w-full">
               <Image 
-                src="/miller_design_work/Mockup.webp" 
+                src="/miller_design_work/Transform Brand.webp" 
                 alt="Featured Design Work" 
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

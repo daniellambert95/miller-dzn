@@ -35,8 +35,8 @@ const Header = () => {
 
   return (
     <header className={`fixed w-full z-50 ${headerBg} transition-all duration-300`}>
-      <div className="container-custom flex justify-between items-center py-8">
-        {/* Logo - Left */}
+      <div className="container-nav flex items-center py-8">
+        {/* Logo - Far Left */}
         <div className="flex items-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Hamburger Menu Button - Center */}
         <button
-          className="text-white flex-shrink-0"
+          className="text-white flex-shrink-0 absolute left-1/2 transform -translate-x-1/2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -68,11 +68,11 @@ const Header = () => {
           )}
         </button>
 
-        {/* CTA Button - Right */}
+        {/* CTA Button - Far Right */}
         <div className="flex items-center justify-end flex-1">
           <button
-            onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
-            className="px-6 py-2 rounded-full font-medium transition-all duration-300 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black cursor-pointer"
+            onClick={() => window.open('https://calendly.com/geoff-millerdesign', '_blank')}
+            className="px-6 py-2 rounded-2xl font-medium transition-all duration-300 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black cursor-pointer"
           >
             Book a Call
           </button>

@@ -3,13 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import bunnyImageLoader from '@/utils/imageLoader';
-import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
-
-const drukWide = localFont({
-  src: '../../public/fonts/Druk-Wide-Medium.ttf',
-  display: 'swap',
-});
 
 const inter = Inter({
     subsets: ["latin"],
@@ -57,9 +51,9 @@ const IndustryGoalSection = () => {
           <div className="inline-block bg-gradient-to-r from-[#04b9d6]/20 to-[#04b9d6]/10 px-4 py-2 mb-6 rounded-full border border-[#04b9d6]/30">
             <span className="text-[#04b9d6] font-medium">Our Services</span>
           </div>
-          <h2 className={`${drukWide.className} text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight`}>
-            Any Industry. Any Goal. <br className="hidden md:block" />
-            <span className={`${drukWide.className}`} >We Make Content Creation stand out for You </span> 
+          <h2 className={`${inter.className} text-center max-w-4xl mx-auto text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight`}>
+            Any Industry. Any Goal. <br className="block" />
+            <span className={`${inter.className}`}>We Make Content Creation <br /> Stand Out for You</span>
           </h2>
           <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
             We don&apos;t need to compromise on quality for short-term profit because our subscription model is built on long-term, mutually beneficial partnerships with clients hiding.

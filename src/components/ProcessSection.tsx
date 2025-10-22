@@ -126,7 +126,7 @@ const ProcessSection = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-8">
-            <button className="bg-[#ff6b35] hover:bg-[#ff5722] text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-[#ff6b35] hover:bg-[#ff5722] text-white font-bold py-4 px-10 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Sign Up Today
             </button>
           </div>

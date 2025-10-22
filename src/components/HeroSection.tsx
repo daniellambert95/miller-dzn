@@ -54,7 +54,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <div className="text-center max-w-5xl">
             <h1 className={`${drukWide.className} text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-white tracking-tight leading-tight`}>
-              DUBAI&apos;S PREMIUM<br />
+              YOUR PREMIUM<br />
               CONTENT <span className={`${stretchPro.className} italic text-[#FF6B35]`}>SOLUTION</span>
             </h1>
           </div>
@@ -67,12 +67,10 @@ const HeroSection = () => {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="group relative mt-6 px-8 py-3 md:px-10 md:py-4 font-semibold rounded-full text-center inline-flex items-center justify-center overflow-hidden bg-[#04b9d6] hover:bg-[#03a3bd] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
-            aria-label="View Our Creativity"
+            className="px-8 py-3 md:px-10 md:py-4 rounded-2xl font-semibold transition-all duration-300 bg-transparent border-2 border-[#04b9d6] text-[#fff] hover:bg-[#04b9d6] hover:text-white"
+            aria-label="Get Started"
           >
-            <span className="relative text-white text-base md:text-lg z-10">
-              View Our Creativity
-            </span>
+            Get Started
           </a>
         </div>
       </div>

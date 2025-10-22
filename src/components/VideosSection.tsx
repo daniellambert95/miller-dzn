@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
+import Image from 'next/image';
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import bunnyVideoLoader from '@/utils/videoLoader';
 import bunnyImageLoader from '@/utils/imageLoader';
@@ -58,15 +59,13 @@ const VideoCard = ({ video, onClick, selected }: { video: Video; onClick: (video
       onClick={() => onClick(video)}
     >
       {/* Thumbnail image instead of auto-playing video */}
-      <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md border border-white">
-        <img 
-          src={bunnyImageLoader({ 
-            src: `/images/${video.thumbnail}`, 
-            width: 128, 
-            quality: 40 
-          })} 
+      <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md border border-white relative">
+        <Image
+          src={`/images/${video.thumbnail}`}
           alt={`${video.title} thumbnail`}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          loader={bunnyImageLoader}
         />
       </div>
       <div className="flex flex-col justify-center">

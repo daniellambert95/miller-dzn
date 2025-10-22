@@ -19,21 +19,21 @@ const CreativeSubscriptionSection = () => {
           {/* Left Side - Text Content (2/3 width) */}
           <div className="lg:col-span-2 space-y-5">
             <h2 className={`${inter.className} text-3xl md:text-4xl lg:text-5xl font-bold `}>
-              All your Creative <br /> needs
+              <span className={`${inter.className} font-light`}> All your Creative <br /> needs</span>
                <span className="text-[#04b9d6]"> in one single</span><br />
               <span className={`${inter.className} italic text-[#FF6B35]`}>monthly subscription</span>
             </h2>
 
             <div className="space-y-4">
               <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-2xl leading-relaxed">
-                Crystal Clear hourly billing and tonnes of creative experts at your disposal.
+                Crystal Clear monthly billing and tonnes of creative experts at your disposal.
                 That&apos;s what you get when you sign up for Miller Designs all in one creative service.
               </p>
 
               <div className="pt-1">
                 <a
                   href="#contact"
-                  className="inline-block px-8 py-3 font-semibold rounded-full text-center bg-[#FF6B35] hover:bg-[#FF5722] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-white text-base"
+                  className="inline-block px-8 py-3 font-semibold rounded-2xl text-center bg-[#FF6B35] hover:bg-[#FF5722] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-white text-base"
                 >
                   Book a Demo
                 </a>
