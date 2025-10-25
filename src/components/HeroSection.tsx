@@ -67,7 +67,7 @@ const HeroSection = () => {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="px-8 py-3 md:px-10 md:py-4 rounded-2xl font-semibold transition-all duration-300 bg-transparent border-2 border-[#04b9d6] text-[#fff] hover:bg-[#04b9d6] hover:text-white"
+            className="px-8 py-3 md:px-10 md:py-4 rounded-2xl font-semibold transition-all duration-300 bg-transparent border-2 border-[#04b9d6 ] text-[#fff] hover:bg-[#04b9d6] hover:text-white"
             aria-label="Get Started"
           >
             Get Started

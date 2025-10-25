@@ -103,42 +103,89 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {coreValues.map((value, index) => (
-            <div 
-              key={index} 
+        {/* Mobile View - Custom Order: Branding, Graphics, Social Media, Reels, 3D */}
+        <div className="grid grid-cols-1 gap-8 md:hidden">
+          {[0, 1, 4, 2, 3].map((index) => {
+            const value = coreValues[index];
+            return (
+            <div
+              key={index}
               className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group text-left"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Animated background gradient */}
-              <div 
+              <div
                 className={`absolute inset-0 bg-gradient-to-br ${value.bgLight} ${value.bgDark} opacity-0 group-hover:opacity-100 transition-all duration-500`}
               ></div>
-              
+
               {/* Top decorator */}
               <div className="absolute -top-10 -right-10 w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 opacity-50"></div>
-              
+
               {/* Icon */}
               <div className={`relative z-10 bg-gradient-to-br ${value.gradientFrom} ${value.gradientTo} opacity-90 h-16 w-16 rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-md`}>
-                {React.cloneElement(value.icon, { 
-                  className: "h-8 w-8 text-white", 
-                  style: { color: 'white' } 
+                {React.cloneElement(value.icon, {
+                  className: "h-8 w-8 text-white",
+                  style: { color: 'white' }
                 })}
               </div>
-              
+
               {/* Content */}
-              <h3 
+              <h3
                 className="text-xl font-bold mb-3 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300"
                 style={{ color: value.color }}
               >
                 {value.title}
               </h3>
-              
+
               <p className="text-gray-700 relative z-10 group-hover:text-gray-800 transition-colors duration-300">
                 {value.description}
               </p>
-              
+
+              {/* Bottom decorator */}
+              <div className="absolute -bottom-16 -left-16 w-32 h-32 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+            </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop View - Natural Order */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreValues.map((value, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden group text-left"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {/* Animated background gradient */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${value.bgLight} ${value.bgDark} opacity-0 group-hover:opacity-100 transition-all duration-500`}
+              ></div>
+
+              {/* Top decorator */}
+              <div className="absolute -top-10 -right-10 w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 opacity-50"></div>
+
+              {/* Icon */}
+              <div className={`relative z-10 bg-gradient-to-br ${value.gradientFrom} ${value.gradientTo} opacity-90 h-16 w-16 rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-md`}>
+                {React.cloneElement(value.icon, {
+                  className: "h-8 w-8 text-white",
+                  style: { color: 'white' }
+                })}
+              </div>
+
+              {/* Content */}
+              <h3
+                className="text-xl font-bold mb-3 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300"
+                style={{ color: value.color }}
+              >
+                {value.title}
+              </h3>
+
+              <p className="text-gray-700 relative z-10 group-hover:text-gray-800 transition-colors duration-300">
+                {value.description}
+              </p>
+
               {/* Bottom decorator */}
               <div className="absolute -bottom-16 -left-16 w-32 h-32 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
             </div>

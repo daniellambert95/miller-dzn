@@ -60,8 +60,50 @@ const IndustryGoalSection = () => {
           </p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
+        {/* Service Cards Grid - Mobile (Custom Order: Creative Design, Branding, Social Media, Reels) */}
+        <div className="grid grid-cols-1 gap-10 max-w-6xl mx-auto md:hidden">
+          {[0, 1, 3, 2].map((serviceIndex) => {
+            const service = services[serviceIndex];
+            return (
+            <div
+              key={serviceIndex}
+              className="bg-transparent border-t border-white/10 hover:border-white/20 transition-all duration-300 group flex gap-6 md:gap-8 pt-8 md:pt-10"
+            >
+              {/* Icon */}
+              <div className={`w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 flex-shrink-0 rounded-2xl flex items-center justify-center ${
+                service.color === 'cyan'
+                  ? 'bg-gradient-to-br from-[#04b9d6]/20 to-[#04b9d6]/5'
+                  : 'bg-gradient-to-br from-[#ff6b35]/20 to-[#ff6b35]/5'
+              } group-hover:scale-105 transition-transform duration-300`}>
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  width={140}
+                  height={140}
+                  className="object-contain w-full h-full"
+                  loader={bunnyImageLoader}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <h3
+                  className={`${inter.className} text-2xl md:text-3xl font-bold mb-4 md:mb-5 tracking-wide`}
+                  style={{ color: service.titleColor }}
+                >
+                  {service.title}
+                </h3>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+            );
+          })}
+        </div>
+
+        {/* Service Cards Grid - Desktop (Natural Order) */}
+        <div className="hidden md:grid grid-cols-2 gap-10 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

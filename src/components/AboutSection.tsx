@@ -13,10 +13,10 @@ const AboutSection = () => {
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
             {/* Geoff Photo */}
-            <div className="relative h-[450px] w-full max-w-[450px] rounded-2xl overflow-hidden bg-black">
+            <div className="relative h-[450px] w-full max-w-[600px] rounded-2xl overflow-hidden bg-black">
               <Image
-                src="/section2/Box 2.png"
-                alt="Geoff - Creative Director"
+                src="/geoff-miller-creative-director-dubai.webp"
+                alt="Geoff Miller - Creative Director Dubai"
                 fill
                 className="object-contain"
                 quality={95}
@@ -24,7 +24,7 @@ const AboutSection = () => {
               />
               <div className="absolute bottom-6 left-4 right-4 text-center z-10">
                 <p className="text-white text-sm md:text-base font-light drop-shadow-2xl">
-                  Geoff - Creative Director
+                  Geoff Miller - Creative Director
                 </p>
               </div>
             </div>

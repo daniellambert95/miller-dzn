@@ -4,21 +4,28 @@ import React from 'react';
 import Image from 'next/image';
 import bunnyImageLoader from '@/utils/imageLoader';
 
-// Use all 8 logos
+// Client logos and venue photos
 const clientLogos = [
-  { name: "Client 1", path: "/client_logos/Bourjois.webp" },
-  { name: "Client 2", path: "/client_logos/Cadillac.webp" },
-  { name: "Client 3", path: "/client_logos/CLAP.webp" },
-  { name: "Client 4", path: "/client_logos/IHG.webp" },
-  { name: "Client 5", path: "/client_logos/IRis.webp" },
-  { name: "Client 6", path: "/client_logos/JA.webp" },
-  { name: "Client 7", path: "/client_logos/JJBL.webp" },
-  { name: "Client 8", path: "/client_logos/Schwepps.webp" },
-  { name: "Client 8", path: "/client_logos/Sony.webp" },
-  { name: "Client 8", path: "/client_logos/Surf Club.webp" },
-  { name: "Client 8", path: "/client_logos/Tiktok.webp" },
-  { name: "Client 8", path: "/client_logos/Ushuaia.webp" },
-  { name: "Client 8", path: "/client_logos/White.webp" },
+  { name: "Bourjois", path: "/client_logos/Bourjois.webp", isLogo: true },
+  { name: "Cadillac", path: "/client_logos/Cadillac.webp", isLogo: true },
+  { name: "CLAP", path: "/client_logos/CLAP.webp", isLogo: true },
+  { name: "IHG", path: "/client_logos/IHG.webp", isLogo: true },
+  { name: "IRis", path: "/client_logos/IRis.webp", isLogo: true },
+  { name: "JA", path: "/client_logos/JA.webp", isLogo: true },
+  { name: "JJBL", path: "/client_logos/JJBL.webp", isLogo: true },
+  { name: "Schwepps", path: "/client_logos/Schwepps.webp", isLogo: true },
+  { name: "Sony", path: "/client_logos/Sony.webp", isLogo: true },
+  { name: "Surf Club", path: "/client_logos/Surf Club.webp", isLogo: true },
+  { name: "Tiktok", path: "/client_logos/Tiktok.webp", isLogo: true },
+  { name: "Ushuaia", path: "/client_logos/Ushuaia.webp", isLogo: true },
+  { name: "White", path: "/client_logos/White.webp", isLogo: true },
+  { name: "Be Beach", path: "/Be Beach.webp", isLogo: false },
+  { name: "Coca Cola Arena", path: "/Coca Cola Arena.webp", isLogo: false },
+  { name: "Conrad", path: "/Conrad.webp", isLogo: false },
+  { name: "O Beach", path: "/O beach.webp", isLogo: false },
+  { name: "SO Uptown", path: "/SO Uptown.webp", isLogo: false },
+  { name: "Soho Garden", path: "/Soho Garden.webp", isLogo: false },
+  { name: "Voco", path: "/Voco.webp", isLogo: false },
 ];
 
 const LogoBanner = () => {
@@ -40,7 +47,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
-                  className="object-contain brightness-0 invert"
+                  className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
               </div>
@@ -57,7 +64,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
-                  className="object-contain brightness-0 invert"
+                  className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
               </div>
@@ -81,7 +88,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
-                  className="object-contain brightness-0 invert"
+                  className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
               </div>
@@ -98,7 +105,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
-                  className="object-contain brightness-0 invert"
+                  className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
               </div>
@@ -106,7 +113,7 @@ const LogoBanner = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Simple CSS for scrolling animation */}
       <style jsx global>{`
         .logo-container {
