@@ -98,6 +98,9 @@ const Header = () => {
             <Link href="/gallery" className="text-white hover:text-[#04b9d6] transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Gallery
             </Link>
+            <Link href="/blog" className="text-white hover:text-[#04b9d6] transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </Link>
             <Link href="/contact" className="text-white hover:text-[#04b9d6] transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
