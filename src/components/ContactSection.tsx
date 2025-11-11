@@ -131,7 +131,7 @@ const ContactSection = () => {
           
           {/* Contact Form */}
           <div id="contact-form" className="bg-zinc-900 border border-white/10 rounded-xl p-8">
-            <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
+            <h3 className="text-xl font-bold mb-6 text-white">Create with us</h3>
 
             {submitStatus.type && (
               <div className={`mb-6 p-4 rounded-md ${
