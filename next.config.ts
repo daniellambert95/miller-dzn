@@ -21,9 +21,20 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
   
-  // Headers for SEO and security
+  // Headers for SEO, security, and performance
   async headers() {
     return [
+      // Cache static assets aggressively
+      {
+        source: '/:all*(svg|jpg|jpeg|png|webp|gif|ico|woff|woff2|ttf|otf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Security headers for all pages
       {
         source: '/:path*',
         headers: [

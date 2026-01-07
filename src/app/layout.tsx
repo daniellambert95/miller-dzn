@@ -75,6 +75,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* DNS prefetch and preconnect for faster CDN loading */}
+        <link rel="dns-prefetch" href="https://site-and-site-miller-design-images.b-cdn.net" />
+        <link rel="preconnect" href="https://site-and-site-miller-design-images.b-cdn.net" crossOrigin="anonymous" />
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VK02GGPTG6"
           strategy="afterInteractive"

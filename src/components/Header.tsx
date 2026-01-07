@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import bunnyImageLoader from '@/utils/imageLoader';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -40,13 +39,12 @@ const Header = () => {
         <div className="flex items-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
-              src="/miller_logos/MDZN New Logo 2025 TRANSPARENT.png"
+              src="/Miller Design Logo.svg"
               alt="Miller Design Logo"
               width={150}
               height={50}
-              className="h-auto brightness-0 invert"
+              className="h-auto [filter:invert(1)_brightness(2)]"
               priority
-              loader={bunnyImageLoader}
             />
           </Link>
         </div>

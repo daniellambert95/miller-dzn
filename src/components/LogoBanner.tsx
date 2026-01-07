@@ -47,6 +47,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
+                  loading={index < 10 ? "eager" : "lazy"}
                   className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
@@ -64,6 +65,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
+                  loading="lazy"
                   className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
@@ -88,6 +90,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
+                  loading={index < 10 ? "eager" : "lazy"}
                   className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
@@ -105,6 +108,7 @@ const LogoBanner = () => {
                   alt={`${logo.name} logo`}
                   width={120}
                   height={40}
+                  loading="lazy"
                   className={`object-contain ${logo.isLogo ? 'brightness-0 invert' : ''}`}
                   loader={bunnyImageLoader}
                 />
@@ -128,12 +132,14 @@ const LogoBanner = () => {
           display: flex;
           animation: scroll 40s linear infinite;
           white-space: nowrap;
+          will-change: transform;
         }
 
         .logo-track-reverse {
           display: flex;
           animation: scroll-reverse 40s linear infinite;
           white-space: nowrap;
+          will-change: transform;
         }
 
         .logo-item {

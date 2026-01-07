@@ -277,7 +277,8 @@ const ArtworkSection = () => {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        priority={index < 5}
+                        priority={index < 3}
+                        loading={index < 3 ? "eager" : "lazy"}
                         style={{ objectFit: 'cover' }}
                         className="rounded-md"
                         loader={bunnyImageLoader}
@@ -374,10 +375,11 @@ const ArtworkSection = () => {
         <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
           <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <div className="relative w-full h-full">
-              <Image 
+              <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 fill
+                priority
                 style={{ objectFit: 'contain' }}
                 className="rounded-md"
                 loader={bunnyImageLoader}

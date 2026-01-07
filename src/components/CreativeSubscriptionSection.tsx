@@ -50,7 +50,7 @@ const CreativeSubscriptionSection = () => {
             {/* Top - Creative & Socials Box */}
             <div className="relative rounded-2xl overflow-hidden bg-[#04b9d6] h-[400px]">
               <Image
-                src="/section2/Box 1.png"
+                src="/section2/Box 1.webp"
                 alt="Your Creative & Socials Covered"
                 fill
                 className="object-contain"
@@ -62,7 +62,7 @@ const CreativeSubscriptionSection = () => {
             {/* Bottom - Strategy Box */}
             <div className="relative rounded-2xl overflow-hidden bg-black h-[200px]">
               <Image
-                src="/section2/Box 3.png"
+                src="/section2/Box 3.webp"
                 alt="Our Strategy Your Success"
                 fill
                 className="object-contain"
