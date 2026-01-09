@@ -30,7 +30,7 @@ const AboutSection = () => {
             {/* Geoff Photo */}
             <div className="relative h-[450px] w-full max-w-[600px] rounded-2xl overflow-hidden">
               <Image
-                src="/geoff-miller-creative-director-dubai.webp"
+                src="/GEOFF TRANSPARENT.webp"
                 alt="Geoff Miller - Creative Director Dubai"
                 fill
                 className="object-contain"
