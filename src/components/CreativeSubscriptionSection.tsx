@@ -30,12 +30,20 @@ const CreativeSubscriptionSection = () => {
                 That&apos;s what you get when you sign up for Miller Designs all in one creative service.
               </p>
 
-              <div className="pt-1">
+              <div className="pt-1 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#contact"
+                  href="https://calendly.com/geoff-millerdesign"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-8 py-3 font-semibold rounded-2xl text-center bg-[#FF6B35] hover:bg-[#FF5722] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-white text-base"
                 >
                   Book a Demo
+                </a>
+                <a
+                  href="/gallery"
+                  className="inline-block px-12 py-3 font-semibold rounded-2xl text-center bg-[#04b9d6] hover:bg-[#04b9d6]/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-white text-base"
+                >
+                  Portfolio
                 </a>
               </div>
 

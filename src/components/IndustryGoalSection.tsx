@@ -55,9 +55,27 @@ const IndustryGoalSection = () => {
             Any Industry. Any Goal. <br className="block" />
             <span className={`${inter.className}`}>We Make Content Creation <br /> Stand Out for You</span>
           </h2>
-          <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             We don&apos;t need to compromise on quality for short-term profit because our subscription model is built on long-term, mutually beneficial partnerships with clients hiding.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <a
+              href="https://calendly.com/geoff-millerdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#ff6b35]/50"
+            >
+              Book a Demo
+            </a>
+            <a
+              href="/gallery"
+              className="px-12 py-4 bg-[#04b9d6] hover:bg-[#04b9d6]/90 text-white font-semibold rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#04b9d6]/50"
+            >
+              Portfolio
+            </a>
+          </div>
         </div>
 
         {/* Service Cards Grid - Mobile (Custom Order: Creative Design, Branding, Social Media, Reels) */}

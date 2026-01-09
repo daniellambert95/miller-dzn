@@ -7,13 +7,28 @@ import bunnyImageLoader from '@/utils/imageLoader';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section bg-black py-20">
-      <div className="container-custom">
+    <section id="about" className="section relative py-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/Background-MidSection.webp"
+          alt="Background"
+          fill
+          className="object-cover"
+          quality={90}
+          loader={bunnyImageLoader}
+          priority={false}
+        />
+        {/* Optional dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
           <div className="order-2 md:order-1 relative">
             {/* Geoff Photo */}
-            <div className="relative h-[450px] w-full max-w-[600px] rounded-2xl overflow-hidden bg-black">
+            <div className="relative h-[450px] w-full max-w-[600px] rounded-2xl overflow-hidden">
               <Image
                 src="/geoff-miller-creative-director-dubai.webp"
                 alt="Geoff Miller - Creative Director Dubai"
