@@ -39,11 +39,11 @@ const Header = () => {
         <div className="flex items-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
-              src="/Miller Design Logo.svg"
+              src="/Miller Design Logo New.svg"
               alt="Miller Design Logo"
               width={150}
               height={50}
-              className="h-auto [filter:invert(1)_brightness(2)]"
+              className="h-auto brightness-0 invert"
               priority
             />
           </Link>
