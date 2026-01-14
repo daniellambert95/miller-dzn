@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import bunnyImageLoader from '@/utils/imageLoader';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,12 +40,13 @@ const Header = () => {
         <div className="flex items-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
-              src="/Miller Design Logo New.svg"
+              src="/miller_logos/Miller Design Logo New.svg"
               alt="Miller Design Logo"
               width={150}
               height={50}
               className="h-auto brightness-0 invert"
               priority
+              loader={bunnyImageLoader}
             />
           </Link>
         </div>
