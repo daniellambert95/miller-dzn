@@ -81,8 +81,8 @@ const Header = () => {
 
       {/* Menu (mobile and desktop) - Full Screen Overlay */}
       {isMenuOpen && (
-        <div className="fixed top-20 left-0 right-0 bottom-0 w-full bg-black z-40">
-          <div className="w-full h-full flex flex-col items-center justify-center space-y-8">
+        <div className="absolute top-full left-0 right-0 w-full bg-black z-40 h-[calc(100vh-6rem)]">
+          <div className="w-full h-full flex flex-col items-center justify-center space-y-8 -mt-8">
             <Link href="/" className="text-white hover:text-[#04b9d6] transition-colors text-2xl font-medium" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
