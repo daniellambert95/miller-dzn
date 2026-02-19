@@ -50,7 +50,7 @@ const Footer = () => {
                 alt="Miller Design Logo" 
                 width={150} 
                 height={50} 
-                className="h-auto" 
+                className="h-auto"
                 loader={bunnyImageLoader}
               />
             </div>
